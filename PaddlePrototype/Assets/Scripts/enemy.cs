@@ -1,0 +1,259 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyGridMover : MonoBehaviour
+{
+    public enum BlockedMoveAction
+    {
+        Wait,
+        SkipToNextCommand
+    }
+
+    [System.Serializable]
+    public class MoveCommand
+    {
+        [Header("Move")]
+        public Vector2Int direction = Vector2Int.right;
+
+        [Header("Repeat")]
+        [Min(1)] public int repeatCount = 1;
+
+        [Header("Section Loop")]
+        public bool sectionLoopEnd = false;
+
+        [Tooltip("되돌아갈 커맨드 번호")]
+        [Min(0)] public int loopBackToIndex = 0;
+
+        [Tooltip("구간 반복 횟수")]
+        [Min(1)] public int sectionLoopCount = 1;
+
+        [Header("Y Limit")]
+        public bool stopYMoveAtRow = false;
+        public int stopYRow = 6;
+
+        [Header("Blocked")]
+        public BlockedMoveAction blockedMoveAction =
+            BlockedMoveAction.SkipToNextCommand;
+    }
+
+    private BrickManager brickManager;
+
+    private Vector2Int currentCell;
+    private List<MoveCommand> commands;
+
+    private float moveInterval;
+    private float moveSpeed;
+    private bool loopAllCommands;
+
+    private int commandIndex = 0;
+    private int commandRepeatCounter = 0;
+
+    private Dictionary<int, int> sectionLoopCounters = new();
+
+    private bool isMoving = false;
+    private Coroutine moveRoutine;
+
+    public void Init(
+        BrickManager brickManager,
+        Vector2Int startCell,
+        List<MoveCommand> commands,
+        float moveInterval,
+        float moveSpeed,
+        bool loopAllCommands
+    )
+    {
+        this.brickManager = brickManager;
+        this.currentCell = startCell;
+        this.commands = commands;
+        this.moveInterval = moveInterval;
+        this.moveSpeed = moveSpeed;
+        this.loopAllCommands = loopAllCommands;
+
+        commandIndex = 0;
+        commandRepeatCounter = 0;
+        sectionLoopCounters.Clear();
+
+        transform.position = brickManager.GetCellWorldPosition(currentCell);
+
+        if (moveRoutine != null)
+            StopCoroutine(moveRoutine);
+
+        moveRoutine = StartCoroutine(MoveRoutine());
+    }
+
+    private IEnumerator MoveRoutine()
+    {
+        while (true)
+        {
+            if (!isMoving)
+                TryMoveByCommand();
+
+            yield return new WaitForSeconds(moveInterval);
+        }
+    }
+
+    private void TryMoveByCommand()
+    {
+        if (brickManager == null)
+            return;
+
+        if (commands == null || commands.Count == 0)
+            return;
+
+        int safety = 0;
+
+        while (safety < 20)
+        {
+            safety++;
+
+            if (commandIndex < 0 || commandIndex >= commands.Count)
+                return;
+
+            MoveCommand command = commands[commandIndex];
+            Vector2Int direction = command.direction;
+
+            if (direction == Vector2Int.zero)
+            {
+                CompleteCurrentCommand(command);
+                continue;
+            }
+
+            if (command.stopYMoveAtRow && direction.y != 0)
+            {
+                bool reachedLimit =
+                    (direction.y > 0 && currentCell.y >= command.stopYRow) ||
+                    (direction.y < 0 && currentCell.y <= command.stopYRow);
+
+                if (reachedLimit)
+                {
+                    CompleteCurrentCommand(command);
+                    continue;
+                }
+            }
+
+            Vector2Int nextCell = currentCell + direction;
+
+            if (brickManager.IsCellOccupied(nextCell))
+            {
+                if (command.blockedMoveAction == BlockedMoveAction.SkipToNextCommand)
+                {
+                    CompleteCurrentCommand(command);
+                    continue;
+                }
+
+                return;
+            }
+
+            StartCoroutine(MoveToCell(nextCell));
+            AdvanceCommand(command);
+            return;
+        }
+    }
+
+    private void AdvanceCommand(MoveCommand command)
+    {
+        commandRepeatCounter++;
+
+        if (commandRepeatCounter < command.repeatCount)
+            return;
+
+        commandRepeatCounter = 0;
+
+        // 구간 반복 처리
+        if (command.sectionLoopEnd)
+        {
+            int endIndex = commandIndex;
+
+            if (!sectionLoopCounters.ContainsKey(endIndex))
+                sectionLoopCounters[endIndex] = 0;
+
+            sectionLoopCounters[endIndex]++;
+
+            // 아직 구간 반복 횟수가 남았으면 되돌아감
+            if (sectionLoopCounters[endIndex] < command.sectionLoopCount)
+            {
+                commandIndex = Mathf.Clamp(
+                    command.loopBackToIndex,
+                    0,
+                    commands.Count - 1
+                );
+                return;
+            }
+
+            // 구간 반복이 끝났으면 카운터 정리 후 다음 커맨드로 진행
+            sectionLoopCounters.Remove(endIndex);
+        }
+
+        // 다음 커맨드 실행
+        commandIndex++;
+
+        // 진짜 마지막까지 끝난 경우에만 정지
+        if (commandIndex >= commands.Count)
+        {
+            if (loopAllCommands)
+            {
+                commandIndex = 0;
+                commandRepeatCounter = 0;
+                sectionLoopCounters.Clear();
+            }
+            else
+            {
+                StopMoving();
+            }
+        }
+    }
+
+    private void CompleteCurrentCommand(MoveCommand command)
+    {
+        commandRepeatCounter = command.repeatCount - 1;
+        AdvanceCommand(command);
+    }
+
+    private IEnumerator MoveToCell(Vector2Int targetCell)
+    {
+        isMoving = true;
+
+        Vector3 targetPos = brickManager.GetCellWorldPosition(targetCell);
+
+        while (Vector3.Distance(transform.position, targetPos) > 0.01f)
+        {
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                targetPos,
+                moveSpeed * Time.deltaTime
+            );
+
+            yield return null;
+        }
+
+        transform.position = targetPos;
+        currentCell = targetCell;
+
+        isMoving = false;
+    }
+
+    private void StopMoving()
+    {
+        if (moveRoutine != null)
+        {
+            StopCoroutine(moveRoutine);
+            moveRoutine = null;
+        }
+
+        isMoving = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Ball"))
+            return;
+
+        BallController ball = collision.gameObject.GetComponent<BallController>();
+
+        if (ball != null)
+            ball.DecreaseByBlockHit();
+
+        Destroy(gameObject);
+    }
+}
