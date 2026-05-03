@@ -28,7 +28,7 @@ public class BrickCell : MonoBehaviour
         BallController ball = collision.gameObject.GetComponent<BallController>();
 
         if (ball != null)
-            ball.DecreaseByBlockHit();
+           // ball.DecreaseByBlockHit();
 
         if (isFixed)
             return;
