@@ -1,0 +1,52 @@
+using UnityEngine;
+using UnityEngine.InputSystem; // 1. 네임스페이스 추가
+
+public class GroundPadController : MonoBehaviour
+{
+    [SerializeField] private float moveSpeed = 15f;
+    [SerializeField] private float paddleWidth = 0.7f;
+    [SerializeField] private float activeCollisionEnabled = 1f;
+    private Camera mainCamera;
+
+    private Collider2D paddleCollider;
+    private Transform tr;
+    private bool isCollisionOn = true;
+
+
+    void Start()
+    {
+        mainCamera = Camera.main;
+        paddleCollider = GetComponent<Collider2D>();
+        tr = GetComponent<Transform>();
+        if(gameObject.name.Contains("paddle_down"))
+        {
+           tr.localScale = new Vector3(paddleWidth,0.5f,1f);
+        }
+        if(activeCollisionEnabled != 1)
+        {
+            paddleCollider.enabled = false;
+        }
+    }
+
+    void Update()
+    {
+        // 2. Mouse.current를 사용하여 클릭 체크
+        if (Mouse.current.leftButton.isPressed)
+        {
+            MovePad();
+        }
+    }
+
+    void MovePad()
+    {
+        // 3. 마우스 위치 읽기
+        Vector2 mousePixelPos = Mouse.current.position.ReadValue();
+        Vector3 mousePos = mainCamera.ScreenToWorldPoint(new Vector3(mousePixelPos.x, mousePixelPos.y, -mainCamera.transform.position.z));
+        
+        Vector3 targetPos = new Vector3(mousePos.x, transform.position.y, transform.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+
+        float clampedX = Mathf.Clamp(transform.position.x, -5.5f, 5.5f);
+        transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
+    }
+}
