@@ -1,265 +1,18 @@
 [
   {
-    "file_id": "New Unity Project/Assets/Editor/PatrolPathEditor.cs",
-    "path": "New Unity Project/Assets/Editor/PatrolPathEditor.cs",
-    "file_name": "PatrolPathEditor.cs",
-    "content_hash": "68e72ce831c0ff9093a1f46bcf19f3aa1ecf9fbf",
-    "size": 1625,
-    "line_count": 41,
-    "namespace": "Platformer",
+    "file_id": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "path": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "file_name": "ball_movement.cs",
+    "content_hash": "7e75b24f716fd7db25de5a945abbf5a6b1628b0e",
+    "size": 4279,
+    "line_count": 118,
+    "namespace": "",
     "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "Platformer.Mechanics",
-      "UnityEditor",
       "UnityEngine"
     ],
     "classes": [
       {
-        "name": "PatrolPathGizmo",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Editor"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PatrolPathGizmo",
-    "unity_type": "None",
-    "methods": [
-      "OnSceneGUI",
-      "OnDrawGizmo"
-    ],
-    "fields": [
-      {
-        "name": "path",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "System",
-      "Collections",
-      "Generic",
-      "Platformer",
-      "Mechanics",
-      "UnityEditor",
-      "UnityEngine",
-      "CustomEditor",
-      "PatrolPath",
-      "Editor",
-      "OnSceneGUI",
-      "EditorGUI",
-      "ChangeCheckScope",
-      "InverseTransformPoint",
-      "Handles",
-      "PositionHandle",
-      "TransformPoint",
-      "Label",
-      "ToString",
-      "DrawGizmo",
-      "GizmoType",
-      "Selected",
-      "NonSelected",
-      "OnDrawGizmo",
-      "Color",
-      "DrawDottedLine",
-      "DrawSolidDisc"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      5,
-      0.1
-    ],
-    "guessed_roles": [
-      "ui",
-      "scene",
-      "runtime"
-    ],
-    "summary_signals": [
-      "UI 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Mod Assets/Mod Resources/Scripts/Backend/TemplateEditorDetection.cs",
-    "path": "New Unity Project/Assets/Mod Assets/Mod Resources/Scripts/Backend/TemplateEditorDetection.cs",
-    "file_name": "TemplateEditorDetection.cs",
-    "content_hash": "93e3caea740af8ff7c0c56d18a88510ef09e1d59",
-    "size": 1826,
-    "line_count": 45,
-    "namespace": "classes",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "System.Linq",
-      "System.Reflection",
-      "UnityEngine",
-      "UnityEditor"
-    ],
-    "classes": [
-      {
-        "name": "TemplateEditorDetection",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Editor"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "TemplateEditorDetection",
-    "unity_type": "None",
-    "methods": [
-      "TemplateEditorDetection"
-    ],
-    "fields": [
-      {
-        "name": "platformerDefine",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "kartDefine",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "ballgameDefine",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "System",
-      "Collections",
-      "Generic",
-      "Linq",
-      "Reflection",
-      "UnityEngine",
-      "UNITY_EDITOR",
-      "UnityEditor",
-      "Checks",
-      "InitializeOnLoad",
-      "Editor",
-      "Get",
-      "PlayerSettings",
-      "GetScriptingDefineSymbolsForGroup",
-      "EditorUserBuildSettings",
-      "Split",
-      "ToList",
-      "Template",
-      "Type",
-      "GetType",
-      "Platformer",
-      "Core",
-      "Simulation",
-      "KartGame",
-      "KartSystems",
-      "KartMovement",
-      "TeamBallGame",
-      "UNITY_TEMPLATE_PLATFORMER",
-      "UNITY_TEMPLATE_KART",
-      "UNITY_TEMPLATE_BALLGAME",
-      "Contains",
-      "Add",
-      "SetScriptingDefineSymbolsForGroup",
-      "Join",
-      "ToArray"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "Platformer.Core.Simulation",
-      "KartGame.KartSystems.KartMovement",
-      "TeamBallGame.Simulation",
-      "UNITY_TEMPLATE_PLATFORMER",
-      "UNITY_TEMPLATE_KART",
-      "UNITY_TEMPLATE_BALLGAME",
-      ";"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player",
-      "ui",
-      "save-load"
-    ],
-    "summary_signals": [
-      "UI 관련 로직 포함",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Mod Assets/Mod Resources/Scripts/Platformer/EmitParticlesOnLand.cs",
-    "path": "New Unity Project/Assets/Mod Assets/Mod Resources/Scripts/Platformer/EmitParticlesOnLand.cs",
-    "file_name": "EmitParticlesOnLand.cs",
-    "content_hash": "218a65a1aac875717e8388e7356383de8c7f6b0d",
-    "size": 895,
-    "line_count": 40,
-    "namespace": "",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "UnityEngine",
-      "System.Reflection"
-    ],
-    "classes": [
-      {
-        "name": "EmitParticlesOnLand",
+        "name": "BallController",
         "kind": "class",
         "access": "public",
         "base_types": [
@@ -271,31 +24,531 @@
         "is_generic": false
       }
     ],
-    "main_class_name": "EmitParticlesOnLand",
+    "main_class_name": "BallController",
     "unity_type": "MonoBehaviour",
     "methods": [
       "Start",
-      "PlayerLanded_OnExecute",
-      "EnemyDeath_OnExecute"
+      "Vector3",
+      "LaunchBall",
+      "Vector2",
+      "OnCollisionStay2D",
+      "FixedUpdate",
+      "OnDrawGizmos",
+      "DecreaseByBlockHit"
     ],
     "fields": [
       {
-        "name": "emitOnLand",
+        "name": "power",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "rb",
+        "type": "Rigidbody2D",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "tr",
+        "type": "Transform",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "isGameStarted",
         "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "xOffset",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "paddlePos",
+        "type": "Vector3",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "FixedUpdate"
+    ],
+    "has_update": false,
+    "has_fixed_update": true,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 2,
+    "find_call_count": 1,
+    "new_keyword_count": 7,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "Rigidbody2D",
+      "bool",
+      "Vector3",
+      "UnityEngine",
+      "Start",
+      "GetComponent",
+      "LaunchBall",
+      "Vector2",
+      "OnCollisionStay2D",
+      "Collision2D",
+      "Contains",
+      "Abs",
+      "Game",
+      "DrawRay",
+      "Color",
+      "FixedUpdate",
+      "OnDrawGizmos",
+      "Gizmos",
+      "Find",
+      "DrawLine",
+      "DecreaseByBlockHit",
+      "Max"
+    ],
+    "component_access_types": [
+      "Rigidbody2D",
+      "Transform"
+    ],
+    "created_types": [
+      "Vector3",
+      "Vector2"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "paddle_up",
+      "paddle_down"
+    ],
+    "numeric_literals": [
+      10,
+      30,
+      5,
+      1,
+      0.2,
+      0.7,
+      1,
+      5,
+      10,
+      0.5,
+      0.1
+    ],
+    "guessed_roles": [
+      "runtime",
+      "combat",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "물리 타이밍 처리 가능성",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용",
+      "Find 계열 탐색 사용"
+    ]
+  },
+  {
+    "file_id": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
+    "path": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
+    "file_name": "brick_cell.cs",
+    "content_hash": "599b71e5e8e1bd3511c44391bfc20ae03e722316",
+    "size": 941,
+    "line_count": 44,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "BrickCell",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BrickCell",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Init",
+      "OnCollisionEnter2D",
+      "OnDestroy"
+    ],
+    "fields": [
+      {
+        "name": "manager",
+        "type": "BrickManager",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "cell",
+        "type": "Vector2Int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "isFixed",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "version",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "OnDestroy"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "BrickManager",
+      "Vector2Int",
+      "bool",
+      "int",
+      "UnityEngine",
+      "Init",
+      "OnCollisionEnter2D",
+      "Collision2D",
+      "CompareTag",
+      "Ball",
+      "BallController",
+      "GetComponent",
+      "DecreaseByBlockHit",
+      "Destroy",
+      "OnDestroy",
+      "NotifyBrickDestroyed"
+    ],
+    "component_access_types": [
+      "BallController"
+    ],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "Ball"
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "combat",
+      "manager",
+      "runtime"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "전투 계열 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "PaddlePrototype/Assets/Scripts/brick_manager.cs",
+    "path": "PaddlePrototype/Assets/Scripts/brick_manager.cs",
+    "file_name": "brick_manager.cs",
+    "content_hash": "48858dd85e06ce39dd592a4b2f6499a4502ed10b",
+    "size": 14169,
+    "line_count": 561,
+    "namespace": "",
+    "using_list": [
+      "System.Collections",
+      "System.Collections.Generic",
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "BrickManager",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      },
+      {
+        "name": "GrowthDirection",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      },
+      {
+        "name": "FixedBrickData",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      },
+      {
+        "name": "GrowthCandidate",
+        "kind": "struct",
+        "access": "private",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BrickManager",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "GrowthCandidate",
+      "Vector2",
+      "Vector2Int",
+      "Start",
+      "ResetBricks",
+      "GrowRoutine",
+      "WaitForSeconds",
+      "RespawnMissingStartBricks",
+      "SpawnFixedBricks",
+      "SpawnStartBricks",
+      "SpawnFixedBrick",
+      "GridToWorld",
+      "SpawnBrick",
+      "GetGrowthCandidates",
+      "GetStartConnectedCells",
+      "AddCandidate",
+      "PickByPriorityAndWeight",
+      "PickWeightedCandidate",
+      "Vector3",
+      "FitBrickToCell",
+      "IsValidCell",
+      "NotifyBrickDestroyed",
+      "ClearBricks",
+      "StopGrowing",
+      "IsCellOccupied",
+      "GetCellWorldPosition",
+      "TryWorldToCell",
+      "OnDrawGizmos",
+      "OnDrawGizmosSelected",
+      "DrawGridGizmos"
+    ],
+    "fields": [
+      {
+        "name": "currentVersion",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "name",
+        "type": "string",
         "access": "public",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "emitOnEnemyDeath",
-        "type": "bool",
+        "name": "direction",
+        "type": "Vector2Int",
         "access": "public",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "p",
-        "type": "ParticleSystem",
+        "name": "priority",
+        "type": "int",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "weight",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "cell",
+        "type": "Vector2Int",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "prefabOverride",
+        "type": "GameObject",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "cell",
+        "type": "Vector2Int",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "priority",
+        "type": "int",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "weight",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "occupied",
+        "type": "bool[,]",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "fixedOccupied",
+        "type": "bool[,]",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "growRoutine",
+        "type": "Coroutine",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "clearing",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "connected",
+        "type": "bool[,]",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "next",
+        "type": "Vector2Int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "finalWeight",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "finalPriority",
+        "type": "int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "connected",
+        "type": "bool[,]",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "next",
+        "type": "Vector2Int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "bestPriority",
+        "type": "int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "totalWeight",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "current",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "x",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "y",
+        "type": "float",
         "access": "internal",
         "serialized": false,
         "is_static": false
@@ -314,3395 +567,159 @@
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 0,
-    "public_field_count": 2,
-    "get_component_count": 1,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "bool",
-      "ParticleSystem",
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "Reflection",
-      "RequireComponent",
-      "UNITY_TEMPLATE_PLATFORMER",
-      "Start",
-      "GetComponent",
-      "Platformer",
-      "Gameplay",
-      "PlayerLanded",
-      "OnExecute",
-      "PlayerLanded_OnExecute",
-      "Play",
-      "EnemyDeath",
-      "EnemyDeath_OnExecute"
-    ],
-    "component_access_types": [
-      "ParticleSystem"
-    ],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "runtime",
-      "ui",
-      "player",
-      "combat"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "UI 관련 로직 포함",
-      "전투 계열 로직 포함",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Mod Assets/Mod Resources/Scripts/Platformer/Jiggler.cs",
-    "path": "New Unity Project/Assets/Mod Assets/Mod Resources/Scripts/Platformer/Jiggler.cs",
-    "file_name": "Jiggler.cs",
-    "content_hash": "2661caf5e2d1732300212944d16e716da54d7219",
-    "size": 1636,
-    "line_count": 59,
-    "namespace": "",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "Jiggler",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "Jiggler",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Vector3",
-      "Start",
-      "Update"
-    ],
-    "fields": [
-      {
-        "name": "power",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "jigPosition",
-        "type": "bool",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "positionJigAmount",
-        "type": "Vector3",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "positionFrequency",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "positionTime",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "jigRotation",
-        "type": "bool",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "rotationJigAmount",
-        "type": "Vector3",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "rotationFrequency",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "rotationTime",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "jigScale",
-        "type": "bool",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "scaleFrequency",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "scaleTime",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "basePosition",
-        "type": "Vector3",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "baseRotation",
-        "type": "Quaternion",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "baseScale",
-        "type": "Vector3",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "dt",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Start",
-      "Update"
-    ],
-    "has_update": true,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
     "public_field_count": 9,
-    "get_component_count": 0,
+    "get_component_count": 2,
     "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "bool",
-      "Vector3",
-      "Quaternion",
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "Position",
-      "Rotation",
-      "Scale",
-      "Start",
-      "Update",
-      "Sin",
-      "Euler"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "Vector3"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "Position Jiggler",
-      "Rotation Jiggler",
-      "Scale Jiggler"
-    ],
-    "numeric_literals": [
-      1,
-      120,
-      10
-    ],
-    "guessed_roles": [
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "Update 기반 처리 존재"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Mod Assets/Mod Resources/Scripts/Platformer/PlatformerJumpPad.cs",
-    "path": "New Unity Project/Assets/Mod Assets/Mod Resources/Scripts/Platformer/PlatformerJumpPad.cs",
-    "file_name": "PlatformerJumpPad.cs",
-    "content_hash": "28a8bf7447f239512d66b2c4b01bcbca6ee8200c",
-    "size": 496,
-    "line_count": 22,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine",
-      "Platformer.Mechanics"
-    ],
-    "classes": [
-      {
-        "name": "PlatformerJumpPad",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PlatformerJumpPad",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "OnTriggerEnter2D",
-      "AddVelocity"
-    ],
-    "fields": [
-      {
-        "name": "verticalVelocity",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "rb",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 1,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "UnityEngine",
-      "Platformer",
-      "Mechanics",
-      "OnTriggerEnter2D",
-      "Collider2D",
-      "GetComponent",
-      "PlayerController",
-      "AddVelocity"
-    ],
-    "component_access_types": [
-      "PlayerController"
-    ],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player",
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Mod Assets/Mod Resources/Scripts/Platformer/PlatformerSpeedPad.cs",
-    "path": "New Unity Project/Assets/Mod Assets/Mod Resources/Scripts/Platformer/PlatformerSpeedPad.cs",
-    "file_name": "PlatformerSpeedPad.cs",
-    "content_hash": "70637170bae9c289d59006dcad4644cdaef222b6",
-    "size": 745,
-    "line_count": 28,
-    "namespace": "",
-    "using_list": [
-      "System.Collections",
-      "UnityEngine",
-      "Platformer.Mechanics"
-    ],
-    "classes": [
-      {
-        "name": "PlatformerSpeedPad",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PlatformerSpeedPad",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "OnTriggerEnter2D",
-      "PlayerModifier",
-      "WaitForSeconds"
-    ],
-    "fields": [
-      {
-        "name": "maxSpeed",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "duration",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "rb",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "initialSpeed",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 2,
-    "get_component_count": 1,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
+    "new_keyword_count": 22,
     "coroutine_count": 2,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
-      "float",
-      "System",
-      "Collections",
-      "UnityEngine",
-      "Platformer",
-      "Mechanics",
-      "OnTriggerEnter2D",
-      "Collider2D",
-      "GetComponent",
-      "PlayerController",
-      "StartCoroutine",
-      "PlayerModifier",
-      "WaitForSeconds"
-    ],
-    "component_access_types": [
-      "PlayerController"
-    ],
-    "created_types": [
-      "WaitForSeconds"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      5,
-      1
-    ],
-    "guessed_roles": [
-      "runtime",
-      "player"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Mod Assets/Mod Resources/Scripts/Platformer/SimpleTrigger.cs",
-    "path": "New Unity Project/Assets/Mod Assets/Mod Resources/Scripts/Platformer/SimpleTrigger.cs",
-    "file_name": "SimpleTrigger.cs",
-    "content_hash": "dacc10843cdc5a1b29f58b5317ed9dabaefe50dc",
-    "size": 506,
-    "line_count": 23,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine",
-      "UnityEngine.Events"
-    ],
-    "classes": [
-      {
-        "name": "SimpleTrigger",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "SimpleTrigger",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "OnTriggerEnter2D"
-    ],
-    "fields": [
-      {
-        "name": "triggerBody",
-        "type": "Rigidbody2D",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "onTriggerEnter",
-        "type": "UnityEvent",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "hitRb",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 2,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Rigidbody2D",
-      "UnityEvent",
-      "UnityEngine",
-      "Events",
-      "OnTriggerEnter2D",
-      "Collider2D",
-      "Invoke"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "combat",
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "전투 계열 로직 포함"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Core/Fuzzy.cs",
-    "path": "New Unity Project/Assets/Scripts/Core/Fuzzy.cs",
-    "file_name": "Fuzzy.cs",
-    "content_hash": "da248866ddf267fe3b2d2318af7f31d498c75e31",
-    "size": 969,
-    "line_count": 32,
-    "namespace": "Platformer.Core",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "Fuzzy",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "Fuzzy",
-    "unity_type": "None",
-    "methods": [
-      "ValueLessThan",
-      "ValueGreaterThan",
-      "ValueNear",
-      "Value"
-    ],
-    "fields": [
-      {
-        "name": "delta",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "delta",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "UnityEngine",
-      "Platformer",
-      "Core",
-      "ValueLessThan",
-      "ValueGreaterThan",
-      "ValueNear",
-      "Abs",
-      "Value"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      0.1,
-      1
-    ],
-    "guessed_roles": [],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Core/HeapQueue.cs",
-    "path": "New Unity Project/Assets/Scripts/Core/HeapQueue.cs",
-    "file_name": "HeapQueue.cs",
-    "content_hash": "4d273c934a80b688f06e543a2ca343efe3df886d",
-    "size": 3389,
-    "line_count": 112,
-    "namespace": "Platformer.Core",
-    "using_list": [
-      "System",
-      "System.Collections.Generic"
-    ],
-    "classes": [
-      {
-        "name": "HeapQueue",
-        "kind": "class",
-        "access": "public",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": true
-      }
-    ],
-    "main_class_name": "HeapQueue",
-    "unity_type": "None",
-    "methods": [
-      "Clear",
-      "Contains",
-      "Remove",
-      "Peek",
-      "HeapQueue",
-      "Push",
-      "SiftDown",
-      "Pop",
-      "Compare",
-      "SiftUp"
-    ],
-    "fields": [
-      {
-        "name": "items",
-        "type": "List<T>",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "item",
-        "type": "T",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "last",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "newitem",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "parent",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "endpos",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "startpos",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "newitem",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "childpos",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "pos",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "rightpos",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "System",
-      "Collections",
-      "Generic",
-      "Platformer",
-      "Core",
-      "IComparable",
-      "Count",
-      "IsEmpty",
-      "First",
-      "Clear",
-      "Contains",
-      "Remove",
-      "Peek",
-      "Push",
-      "Add",
-      "SiftDown",
-      "Pop",
-      "RemoveAt",
-      "SiftUp",
-      "Compare",
-      "CompareTo"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "List"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "T"
-    ],
-    "numeric_literals": [
-      2
-    ],
-    "guessed_roles": [
-      "player",
-      "inventory",
-      "runtime"
-    ],
-    "summary_signals": [
-      "인벤토리 계열 로직 포함"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Core/Simulation.cs",
-    "path": "New Unity Project/Assets/Scripts/Core/Simulation.cs",
-    "file_name": "Simulation.cs",
-    "content_hash": "8391ca2ba39154b6792039f67f33eefc4a2fc3ee",
-    "size": 4620,
-    "line_count": 141,
-    "namespace": "Platformer.Core",
-    "using_list": [
-      "System",
-      "System.Collections.Generic",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "implements",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "Simulation",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": true,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "implements",
-    "unity_type": "None",
-    "methods": [
-      "T",
-      "Clear",
-      "Schedule",
-      "Tick"
-    ],
-    "fields": [
-      {
-        "name": "pool",
-        "type": "Stack<Event>",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "time",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "executedEventCount",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "tick",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 5,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "Platformer",
-      "Core",
-      "The",
-      "Events",
-      "HeapQueue",
-      "Event",
-      "Type",
-      "Create",
-      "New",
-      "TryGetValue",
-      "Push",
-      "Count",
-      "Pop",
-      "Clear",
-      "Schedule",
-      "Tick",
-      "Reschedule",
-      "Return",
-      "GetModel",
-      "InstanceRegister",
-      "Set",
-      "SetModel",
-      "Destroy",
-      "DestroyModel",
-      "Returns",
-      "If",
-      "Peek",
-      "ExecuteEvent",
-      "Log",
-      "GetType",
-      "Name",
-      "Cleanup",
-      "KeyNotFoundException",
-      "This",
-      "LogError",
-      "No",
-      "Pool"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "HeapQueue",
-      "Stack",
-      "T"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "T",
-      "tick",
-      "<color=green>{ev.tick} {ev.GetType().Name}</color>",
-      "No Pool for: {ev.GetType()}"
-    ],
-    "numeric_literals": [
-      4
-    ],
-    "guessed_roles": [
-      "manager",
-      "ui"
-    ],
-    "summary_signals": [
-      "UI 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Core/Simulation.Event.cs",
-    "path": "New Unity Project/Assets/Scripts/Core/Simulation.Event.cs",
-    "file_name": "Simulation.Event.cs",
-    "content_hash": "862e9cab90a78def5de43144be8609231cd8b45e",
-    "size": 1996,
-    "line_count": 63,
-    "namespace": "Platformer.Core",
-    "using_list": [
-      "System.Collections.Generic"
-    ],
-    "classes": [
-      {
-        "name": "Simulation",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": true,
-        "is_generic": false
-      },
-      {
-        "name": "Event",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [
-          "System.IComparable"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "to",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "Event",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [
-          "Event where T : Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": true
-      }
-    ],
-    "main_class_name": "Simulation",
-    "unity_type": "None",
-    "methods": [
-      "CompareTo",
-      "Execute",
-      "Precondition",
-      "ExecuteEvent",
-      "Cleanup"
-    ],
-    "fields": [
-      {
-        "name": "tick",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "OnExecute",
-        "type": "System.Action<T>",
-        "access": "public",
-        "serialized": false,
-        "is_static": true
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "System.Action",
-      "System",
-      "Collections",
-      "Generic",
-      "Platformer",
-      "Core",
-      "An",
-      "The",
-      "Precondition",
-      "IComparable",
-      "CompareTo",
-      "Execute",
-      "ExecuteEvent",
-      "This",
-      "It",
-      "Cleanup",
-      "OnExecute",
-      "Use",
-      "Invoke"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "Event",
-      "T"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "ui",
-      "data"
-    ],
-    "summary_signals": [
-      "UI 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Core/Simulation.InstanceRegister.cs",
-    "path": "New Unity Project/Assets/Scripts/Core/Simulation.InstanceRegister.cs",
-    "file_name": "Simulation.InstanceRegister.cs",
-    "content_hash": "9eabd858c229ee704fa78114425a6967b0fd8faa",
-    "size": 536,
-    "line_count": 16,
-    "namespace": "Platformer.Core",
-    "using_list": [],
-    "classes": [
-      {
-        "name": "Simulation",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": true,
-        "is_generic": false
-      },
-      {
-        "name": "provides",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "InstanceRegister",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": true
-      }
-    ],
-    "main_class_name": "Simulation",
-    "unity_type": "None",
-    "methods": [
-      "T"
-    ],
-    "fields": [],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Platformer",
-      "Core",
-      "This",
-      "It"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "T"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "T"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "manager",
-      "data"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Gameplay/EnablePlayerInput.cs",
-    "path": "New Unity Project/Assets/Scripts/Gameplay/EnablePlayerInput.cs",
-    "file_name": "EnablePlayerInput.cs",
-    "content_hash": "4426dfc77afbffed1f083f843a491089ea365ba8",
-    "size": 479,
-    "line_count": 19,
-    "namespace": "Platformer.Gameplay",
-    "using_list": [
-      "Platformer.Core",
-      "Platformer.Model"
-    ],
-    "classes": [
-      {
-        "name": "EnablePlayerInput",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Simulation.Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "EnablePlayerInput",
-    "unity_type": "None",
-    "methods": [
-      "Execute"
-    ],
-    "fields": [
-      {
-        "name": "player",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Platformer",
-      "Core",
-      "Model",
-      "Gameplay",
-      "This",
-      "Simulation",
-      "Event",
-      "PlatformerModel",
-      "GetModel",
-      "Execute"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Gameplay/EnemyDeath.cs",
-    "path": "New Unity Project/Assets/Scripts/Gameplay/EnemyDeath.cs",
-    "file_name": "EnemyDeath.cs",
-    "content_hash": "726609f6d548af3e884f65ae2d214503143f42ad",
-    "size": 607,
-    "line_count": 22,
-    "namespace": "Platformer.Gameplay",
-    "using_list": [
-      "Platformer.Core",
-      "Platformer.Mechanics"
-    ],
-    "classes": [
-      {
-        "name": "EnemyDeath",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Simulation.Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "EnemyDeath",
-    "unity_type": "None",
-    "methods": [
-      "Execute"
-    ],
-    "fields": [
-      {
-        "name": "enemy",
-        "type": "EnemyController",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "EnemyController",
-      "Platformer",
-      "Core",
-      "Mechanics",
-      "Gameplay",
-      "Fired",
-      "Simulation",
-      "Event",
-      "Execute",
-      "PlayOneShot"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "EnemyDeath"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "combat"
-    ],
-    "summary_signals": [
-      "전투 계열 로직 포함"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Gameplay/HealthIsZero.cs",
-    "path": "New Unity Project/Assets/Scripts/Gameplay/HealthIsZero.cs",
-    "file_name": "HealthIsZero.cs",
-    "content_hash": "99590b26385432856638e57c2e8bdd6206a35946",
-    "size": 524,
-    "line_count": 21,
-    "namespace": "Platformer.Gameplay",
-    "using_list": [
-      "Platformer.Core",
-      "Platformer.Mechanics"
-    ],
-    "classes": [
-      {
-        "name": "HealthIsZero",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Simulation.Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "HealthIsZero",
-    "unity_type": "None",
-    "methods": [
-      "Execute"
-    ],
-    "fields": [
-      {
-        "name": "health",
-        "type": "Health",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Health",
-      "Platformer",
-      "Core",
-      "Mechanics",
-      "Simulation",
-      "Gameplay",
-      "Fired",
-      "This",
-      "PlayerDeath",
-      "Event",
-      "Execute",
-      "Schedule"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "HealthIsZero"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Gameplay/PlayerDeath.cs",
-    "path": "New Unity Project/Assets/Scripts/Gameplay/PlayerDeath.cs",
-    "file_name": "PlayerDeath.cs",
-    "content_hash": "6233a69052901d4f53ea7979361007d017a8a8ec",
-    "size": 1135,
-    "line_count": 36,
-    "namespace": "Platformer.Gameplay",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "Platformer.Core",
-      "Platformer.Model",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "PlayerDeath",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Simulation.Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PlayerDeath",
-    "unity_type": "None",
-    "methods": [
-      "Execute"
-    ],
-    "fields": [
-      {
-        "name": "player",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "System",
-      "Collections",
-      "Generic",
-      "Platformer",
-      "Core",
-      "Model",
-      "UnityEngine",
-      "Gameplay",
-      "Fired",
-      "Simulation",
-      "Event",
-      "PlatformerModel",
-      "GetModel",
-      "Execute",
-      "IsAlive",
-      "Die",
-      "PlayOneShot",
-      "SetTrigger",
-      "SetBool",
-      "Schedule",
-      "PlayerSpawn"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "PlayerDeath",
-      "hurt",
-      "dead"
-    ],
-    "numeric_literals": [
-      2
-    ],
-    "guessed_roles": [
-      "player"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Gameplay/PlayerEnemyCollision.cs",
-    "path": "New Unity Project/Assets/Scripts/Gameplay/PlayerEnemyCollision.cs",
-    "file_name": "PlayerEnemyCollision.cs",
-    "content_hash": "d4e045d880d0e3a55fce2f8a7f09284688a4435b",
-    "size": 1483,
-    "line_count": 53,
-    "namespace": "Platformer.Gameplay",
-    "using_list": [
-      "Platformer.Core",
-      "Platformer.Mechanics",
-      "Platformer.Model",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "PlayerEnemyCollision",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Simulation.Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PlayerEnemyCollision",
-    "unity_type": "None",
-    "methods": [
-      "Execute"
-    ],
-    "fields": [
-      {
-        "name": "enemy",
-        "type": "EnemyController",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "player",
-        "type": "PlayerController",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "willHurtEnemy",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 2,
-    "get_component_count": 1,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "EnemyController",
-      "PlayerController",
-      "Platformer",
-      "Core",
-      "Mechanics",
-      "Model",
-      "UnityEngine",
-      "Simulation",
-      "Gameplay",
-      "Fired",
-      "Player",
-      "Enemy",
-      "EnemyCollision",
-      "Event",
-      "PlatformerModel",
-      "GetModel",
-      "Execute",
-      "Bounds",
-      "GetComponent",
-      "Health",
-      "Decrement",
-      "IsAlive",
-      "Schedule",
-      "EnemyDeath",
-      "Bounce",
-      "PlayerDeath"
-    ],
-    "component_access_types": [
-      "Health"
-    ],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "EnemyCollision"
-    ],
-    "numeric_literals": [
-      2,
-      7
-    ],
-    "guessed_roles": [
-      "player",
-      "combat"
-    ],
-    "summary_signals": [
-      "전투 계열 로직 포함",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Gameplay/PlayerEnteredDeathZone.cs",
-    "path": "New Unity Project/Assets/Scripts/Gameplay/PlayerEnteredDeathZone.cs",
-    "file_name": "PlayerEnteredDeathZone.cs",
-    "content_hash": "e7fda6c91617c903573e5b9a150c2d95e0b9ac6a",
-    "size": 594,
-    "line_count": 22,
-    "namespace": "Platformer.Gameplay",
-    "using_list": [
-      "Platformer.Core",
-      "Platformer.Mechanics",
-      "Platformer.Model"
-    ],
-    "classes": [
-      {
-        "name": "PlayerEnteredDeathZone",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Simulation.Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PlayerEnteredDeathZone",
-    "unity_type": "None",
-    "methods": [
-      "Execute"
-    ],
-    "fields": [
-      {
-        "name": "deathzone",
-        "type": "DeathZone",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "DeathZone",
-      "Platformer",
-      "Core",
-      "Mechanics",
-      "Model",
-      "Gameplay",
-      "Fired",
-      "Simulation",
-      "Event",
-      "PlatformerModel",
-      "GetModel",
-      "Execute",
-      "Schedule",
-      "PlayerDeath"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "PlayerEnteredDeathZone"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Gameplay/PlayerEnteredVictoryZone.cs",
-    "path": "New Unity Project/Assets/Scripts/Gameplay/PlayerEnteredVictoryZone.cs",
-    "file_name": "PlayerEnteredVictoryZone.cs",
-    "content_hash": "2f9e5915378bfdd563749f8bc6c9302fb7480433",
-    "size": 694,
-    "line_count": 24,
-    "namespace": "Platformer.Gameplay",
-    "using_list": [
-      "Platformer.Core",
-      "Platformer.Mechanics",
-      "Platformer.Model"
-    ],
-    "classes": [
-      {
-        "name": "PlayerEnteredVictoryZone",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Simulation.Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PlayerEnteredVictoryZone",
-    "unity_type": "None",
-    "methods": [
-      "Execute"
-    ],
-    "fields": [
-      {
-        "name": "victoryZone",
-        "type": "VictoryZone",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "VictoryZone",
-      "Platformer",
-      "Core",
-      "Mechanics",
-      "Model",
-      "Gameplay",
-      "This",
-      "Simulation",
-      "Event",
-      "PlatformerModel",
-      "GetModel",
-      "Execute",
-      "SetTrigger"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "PlayerEnteredVictoryZone",
-      "victory"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Gameplay/PlayerJumped.cs",
-    "path": "New Unity Project/Assets/Scripts/Gameplay/PlayerJumped.cs",
-    "file_name": "PlayerJumped.cs",
-    "content_hash": "f623a025b85125d0ef335b905f7c97403308d344",
-    "size": 518,
-    "line_count": 20,
-    "namespace": "Platformer.Gameplay",
-    "using_list": [
-      "Platformer.Core",
-      "Platformer.Mechanics"
-    ],
-    "classes": [
-      {
-        "name": "PlayerJumped",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Simulation.Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PlayerJumped",
-    "unity_type": "None",
-    "methods": [
-      "Execute"
-    ],
-    "fields": [
-      {
-        "name": "player",
-        "type": "PlayerController",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "PlayerController",
-      "Platformer",
-      "Core",
-      "Mechanics",
-      "Gameplay",
-      "Fired",
-      "Jump",
-      "Simulation",
-      "Event",
-      "Execute",
-      "PlayOneShot"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "PlayerJumped"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Gameplay/PlayerLanded.cs",
-    "path": "New Unity Project/Assets/Scripts/Gameplay/PlayerLanded.cs",
-    "file_name": "PlayerLanded.cs",
-    "content_hash": "18b7527e8b87412ae3305e1dbbf0f18a0b380a15",
-    "size": 418,
-    "line_count": 19,
-    "namespace": "Platformer.Gameplay",
-    "using_list": [
-      "Platformer.Core",
-      "Platformer.Mechanics"
-    ],
-    "classes": [
-      {
-        "name": "PlayerLanded",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Simulation.Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PlayerLanded",
-    "unity_type": "None",
-    "methods": [
-      "Execute"
-    ],
-    "fields": [
-      {
-        "name": "player",
-        "type": "PlayerController",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "PlayerController",
-      "Platformer",
-      "Core",
-      "Mechanics",
-      "Gameplay",
-      "Fired",
-      "Simulation",
-      "Event",
-      "Execute"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "PlayerLanded"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Gameplay/PlayerSpawn.cs",
-    "path": "New Unity Project/Assets/Scripts/Gameplay/PlayerSpawn.cs",
-    "file_name": "PlayerSpawn.cs",
-    "content_hash": "1b884a1d584295cba338bf471446e02473cd508c",
-    "size": 1064,
-    "line_count": 30,
-    "namespace": "Platformer.Gameplay",
-    "using_list": [
-      "Platformer.Core",
-      "Platformer.Mechanics",
-      "Platformer.Model"
-    ],
-    "classes": [
-      {
-        "name": "PlayerSpawn",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Simulation.Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PlayerSpawn",
-    "unity_type": "None",
-    "methods": [
-      "Execute"
-    ],
-    "fields": [
-      {
-        "name": "player",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Platformer",
-      "Core",
-      "Mechanics",
-      "Model",
-      "Gameplay",
-      "Fired",
-      "Simulation",
-      "Event",
-      "PlatformerModel",
-      "GetModel",
-      "Execute",
-      "PlayOneShot",
-      "Increment",
-      "Teleport",
-      "PlayerController",
-      "JumpState",
-      "Grounded",
-      "SetBool",
-      "Schedule",
-      "EnablePlayerInput"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "dead"
-    ],
-    "numeric_literals": [
-      2
-    ],
-    "guessed_roles": [
-      "player"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Gameplay/PlayerStopJump.cs",
-    "path": "New Unity Project/Assets/Scripts/Gameplay/PlayerStopJump.cs",
-    "file_name": "PlayerStopJump.cs",
-    "content_hash": "cba96bed8e639923ad0fee83f3232abd197b50cf",
-    "size": 462,
-    "line_count": 19,
-    "namespace": "Platformer.Gameplay",
-    "using_list": [
-      "Platformer.Core",
-      "Platformer.Mechanics"
-    ],
-    "classes": [
-      {
-        "name": "PlayerStopJump",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Simulation.Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PlayerStopJump",
-    "unity_type": "None",
-    "methods": [
-      "Execute"
-    ],
-    "fields": [
-      {
-        "name": "player",
-        "type": "PlayerController",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "PlayerController",
-      "Platformer",
-      "Core",
-      "Mechanics",
-      "Gameplay",
-      "Fired",
-      "Jump",
-      "Input",
-      "Simulation",
-      "Event",
-      "Execute"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "PlayerStopJump"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Gameplay/PlayerTokenCollision.cs",
-    "path": "New Unity Project/Assets/Scripts/Gameplay/PlayerTokenCollision.cs",
-    "file_name": "PlayerTokenCollision.cs",
-    "content_hash": "7b327551ac872272c31034e0d1575c5f357279d0",
-    "size": 663,
-    "line_count": 24,
-    "namespace": "Platformer.Gameplay",
-    "using_list": [
-      "Platformer.Core",
-      "Platformer.Mechanics",
-      "Platformer.Model",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "PlayerTokenCollision",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Simulation.Event"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PlayerTokenCollision",
-    "unity_type": "None",
-    "methods": [
-      "Execute"
-    ],
-    "fields": [
-      {
-        "name": "player",
-        "type": "PlayerController",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "token",
-        "type": "TokenInstance",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 2,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "PlayerController",
-      "TokenInstance",
-      "Platformer",
-      "Core",
-      "Mechanics",
-      "Model",
-      "UnityEngine",
-      "Gameplay",
-      "Fired",
-      "PlayerCollision",
-      "Simulation",
-      "Event",
-      "PlatformerModel",
-      "GetModel",
-      "Execute",
-      "AudioSource",
-      "PlayClipAtPoint"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "PlayerCollision"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player",
-      "manager"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/AnimationController.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/AnimationController.cs",
-    "file_name": "AnimationController.cs",
-    "content_hash": "9ffe1b0b08860f92febbc00019aed53c25b83d2c",
-    "size": 2187,
-    "line_count": 76,
-    "namespace": "Platformer.Mechanics",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "Platformer.Core",
-      "Platformer.Model",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "AnimationController",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "KinematicObject"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "AnimationController",
-    "unity_type": "None",
-    "methods": [
-      "Awake",
-      "ComputeVelocity"
-    ],
-    "fields": [
-      {
-        "name": "maxSpeed",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "jumpTakeOffSpeed",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "move",
-        "type": "Vector2",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "jump",
-        "type": "bool",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "stopJump",
-        "type": "bool",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "spriteRenderer",
-        "type": "SpriteRenderer",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "animator",
-        "type": "Animator",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Awake"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": true,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 5,
-    "get_component_count": 2,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "Vector2",
-      "bool",
-      "SpriteRenderer",
-      "Animator",
-      "System",
-      "Collections",
-      "Generic",
-      "Platformer",
-      "Core",
-      "Model",
-      "UnityEngine",
-      "Mechanics",
-      "It",
-      "RequireComponent",
-      "KinematicObject",
-      "Max",
-      "Used",
-      "Set",
-      "PlatformerModel",
-      "Simulation",
-      "GetModel",
-      "Awake",
-      "GetComponent",
-      "ComputeVelocity",
-      "IsGrounded",
-      "SetBool",
-      "SetFloat",
-      "Abs"
-    ],
-    "component_access_types": [
-      "SpriteRenderer",
-      "Animator"
-    ],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "grounded",
-      "velocityX"
-    ],
-    "numeric_literals": [
-      7,
-      0.01
-    ],
-    "guessed_roles": [
-      "player",
-      "ui",
-      "runtime",
-      "combat"
-    ],
-    "summary_signals": [
-      "UI 관련 로직 포함",
-      "전투 계열 로직 포함",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/DeathZone.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/DeathZone.cs",
-    "file_name": "DeathZone.cs",
-    "content_hash": "ab4478f53fb54fa4500de5163da8bb64443582f3",
-    "size": 715,
-    "line_count": 25,
-    "namespace": "Platformer.Mechanics",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "Platformer.Gameplay",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "DeathZone",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "DeathZone",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "OnTriggerEnter2D"
-    ],
-    "fields": [],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 1,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "System",
-      "Collections",
-      "Generic",
-      "Platformer",
-      "Gameplay",
-      "UnityEngine",
-      "Core",
-      "Simulation",
-      "Mechanics",
-      "PlayerEnteredDeathZone",
-      "OnTriggerEnter2D",
-      "Collider2D",
-      "GetComponent",
-      "PlayerController",
-      "Schedule"
-    ],
-    "component_access_types": [
-      "PlayerController"
-    ],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player",
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/EnemyController.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/EnemyController.cs",
-    "file_name": "EnemyController.cs",
-    "content_hash": "bfebb5cdac151f187123716c9c9e29a7302857db",
-    "size": 1649,
-    "line_count": 55,
-    "namespace": "Platformer.Mechanics",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "Platformer.Gameplay",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "EnemyController",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "EnemyController",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Awake",
-      "OnCollisionEnter2D",
-      "Update"
-    ],
-    "fields": [
-      {
-        "name": "path",
-        "type": "PatrolPath",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "ouch",
-        "type": "AudioClip",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "mover",
-        "type": "PatrolPath.Mover",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "control",
-        "type": "AnimationController",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "_collider",
-        "type": "Collider2D",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "_audio",
-        "type": "AudioSource",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "spriteRenderer",
-        "type": "SpriteRenderer",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Awake",
-      "Update"
-    ],
-    "has_update": true,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": true,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 2,
-    "get_component_count": 5,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "PatrolPath",
-      "AudioClip",
-      "PatrolPath.Mover",
-      "AnimationController",
-      "Collider2D",
-      "AudioSource",
-      "SpriteRenderer",
-      "System",
-      "Collections",
-      "Generic",
-      "Platformer",
-      "Gameplay",
-      "UnityEngine",
-      "Core",
-      "Simulation",
-      "Mechanics",
-      "Provides",
-      "RequireComponent",
-      "Mover",
-      "Bounds",
-      "Awake",
-      "GetComponent",
-      "OnCollisionEnter2D",
-      "Collision2D",
-      "PlayerController",
-      "Schedule",
-      "PlayerEnemyCollision",
-      "Update",
-      "CreateMover",
-      "Clamp",
-      "Position"
-    ],
-    "component_access_types": [
-      "AnimationController",
-      "Collider2D",
-      "AudioSource",
-      "SpriteRenderer",
-      "PlayerController"
-    ],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      0.5
-    ],
-    "guessed_roles": [
-      "runtime",
-      "player",
-      "ui",
-      "combat"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "Update 기반 처리 존재",
-      "UI 관련 로직 포함",
-      "전투 계열 로직 포함",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/GameController.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/GameController.cs",
-    "file_name": "GameController.cs",
-    "content_hash": "89df8beb42d641cb2efa27ed91bfc1abfee2e882",
-    "size": 1099,
-    "line_count": 38,
-    "namespace": "Platformer.Mechanics",
-    "using_list": [
-      "Platformer.Core",
-      "Platformer.Model",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "exposes",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "GameController",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "GameController",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "OnEnable",
-      "OnDisable",
-      "Update"
-    ],
-    "fields": [],
-    "properties": [
-      {
-        "access": "internal",
-        "type": "GameController",
-        "name": "Instance"
-      }
-    ],
-    "events": [],
-    "unity_messages": [
-      "OnEnable",
-      "OnDisable",
-      "Update"
-    ],
-    "has_update": true,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": true,
-    "has_on_disable": true,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": true,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Platformer",
-      "Core",
-      "Model",
-      "UnityEngine",
-      "Mechanics",
-      "This",
-      "Instance",
-      "The",
-      "InstanceRegister",
-      "Unity",
-      "PlatformerModel",
-      "Simulation",
-      "GetModel",
-      "OnEnable",
-      "OnDisable",
-      "Update",
-      "Tick"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "save-load",
-      "runtime",
-      "manager",
-      "scene",
-      "data"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "Update 기반 처리 존재",
-      "싱글톤 후보",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/Health.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/Health.cs",
-    "file_name": "Health.cs",
-    "content_hash": "a376b154394416091c4e5828ab9d2d44bc0ee0f1",
-    "size": 1505,
-    "line_count": 61,
-    "namespace": "Platformer.Mechanics",
-    "using_list": [
-      "System",
-      "Platformer.Gameplay",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "Health",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "Health",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Increment",
-      "Decrement",
-      "Die",
-      "Awake"
-    ],
-    "fields": [
-      {
-        "name": "maxHP",
-        "type": "int",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "currentHP",
-        "type": "int",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Awake"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": true,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
       "int",
-      "System",
-      "Platformer",
-      "Gameplay",
-      "UnityEngine",
-      "Core",
-      "Simulation",
-      "Mechanics",
-      "Represebts",
-      "The",
-      "Indicates",
-      "IsAlive",
-      "Increment",
-      "HP",
-      "Clamp",
-      "Decrement",
-      "Will",
-      "HealthIsZero",
-      "Schedule",
-      "Die",
-      "Awake"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "combat",
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "전투 계열 로직 포함"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/KinematicObject.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/KinematicObject.cs",
-    "file_name": "KinematicObject.cs",
-    "content_hash": "973fa7e49d3df4b9301255b6de969b41b86a3c43",
-    "size": 5622,
-    "line_count": 176,
-    "namespace": "Platformer.Mechanics",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "KinematicObject",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "KinematicObject",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "normal",
-      "Bounce",
-      "Teleport",
-      "OnEnable",
-      "OnDisable",
-      "Start",
-      "Update",
-      "ComputeVelocity",
-      "FixedUpdate",
-      "Vector2",
-      "PerformMovement"
-    ],
-    "fields": [
-      {
-        "name": "minGroundNormalY",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "gravityModifier",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "velocity",
-        "type": "Vector2",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "targetVelocity",
-        "type": "Vector2",
-        "access": "protected",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "groundNormal",
-        "type": "Vector2",
-        "access": "protected",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "body",
-        "type": "Rigidbody2D",
-        "access": "protected",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "contactFilter",
-        "type": "ContactFilter2D",
-        "access": "protected",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "hitBuffer",
-        "type": "RaycastHit2D[]",
-        "access": "protected",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "minMoveDistance",
-        "type": "float",
-        "access": "protected",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "shellRadius",
-        "type": "float",
-        "access": "protected",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "deltaPosition",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "move",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "distance",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "currentNormal",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "modifiedDistance",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [
-      {
-        "access": "public",
-        "type": "bool",
-        "name": "IsGrounded"
-      }
-    ],
-    "events": [],
-    "unity_messages": [
-      "OnEnable",
-      "OnDisable",
-      "Start",
-      "Update",
-      "FixedUpdate"
-    ],
-    "has_update": true,
-    "has_fixed_update": true,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": true,
-    "has_on_disable": true,
-    "serialize_field_count": 0,
-    "public_field_count": 3,
-    "get_component_count": 1,
-    "find_call_count": 0,
-    "new_keyword_count": 2,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
+      "string",
+      "Vector2Int",
       "float",
-      "Vector2",
-      "Rigidbody2D",
-      "ContactFilter2D",
-      "RaycastHit2D",
+      "bool[,]",
+      "Coroutine",
       "bool",
       "System",
       "Collections",
       "Generic",
       "UnityEngine",
-      "Platformer",
-      "Mechanics",
-      "Implements",
-      "The",
-      "Is",
-      "IsGrounded",
-      "Bounce",
-      "Teleport",
-      "Vector3",
-      "OnEnable",
-      "GetComponent",
-      "OnDisable",
+      "Serializable",
+      "Brick",
+      "Prefabs",
+      "Fixed",
+      "Bricks",
+      "Grid",
+      "Map",
+      "Position",
+      "Vector2",
+      "Growth",
+      "Timing",
+      "Row",
+      "Weight",
+      "Priority",
+      "Connection",
+      "Rule",
+      "Directions",
+      "Down",
+      "Left",
+      "Right",
       "Start",
-      "SetLayerMask",
-      "Physics2D",
-      "GetLayerCollisionMask",
-      "Update",
-      "ComputeVelocity",
-      "FixedUpdate",
-      "PerformMovement",
-      "Cast",
-      "Dot",
-      "We",
-      "Min"
+      "ResetBricks",
+      "StopGrowing",
+      "ClearBricks",
+      "SpawnFixedBricks",
+      "SpawnStartBricks",
+      "StartCoroutine",
+      "GrowRoutine",
+      "RespawnMissingStartBricks",
+      "GetGrowthCandidates",
+      "Count",
+      "PickByPriorityAndWeight",
+      "SpawnBrick",
+      "WaitForSeconds",
+      "IsValidCell",
+      "SpawnFixedBrick",
+      "LogError",
+      "Prefab",
+      "Instantiate",
+      "GridToWorld",
+      "Quaternion",
+      "FixedBrick_",
+      "FitBrickToCell",
+      "BrickCell",
+      "GetComponent",
+      "AddComponent",
+      "Init",
+      "Brick_",
+      "GetStartConnectedCells",
+      "AddCandidate",
+      "Enqueue",
+      "Dequeue",
+      "Add",
+      "MaxValue",
+      "PickWeightedCandidate",
+      "Vector3",
+      "NotifyBrickDestroyed",
+      "Destroy",
+      "StopCoroutine",
+      "IsCellOccupied",
+      "GetCellWorldPosition",
+      "TryWorldToCell",
+      "RoundToInt",
+      "OnDrawGizmos",
+      "DrawGridGizmos",
+      "Color",
+      "OnDrawGizmosSelected",
+      "Gizmos",
+      "DrawWireCube"
     ],
     "component_access_types": [
-      "Rigidbody2D"
+      "BrickCell"
     ],
     "created_types": [
-      "Vector2"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "value",
-      "dir",
-      "position"
-    ],
-    "numeric_literals": [
-      65,
-      1,
-      16,
-      0.001,
-      0.01
-    ],
-    "guessed_roles": [
-      "runtime",
-      "player",
-      "combat",
-      "ui",
-      "data"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "Update 기반 처리 존재",
-      "물리 타이밍 처리 가능성",
-      "UI 관련 로직 포함",
-      "전투 계열 로직 포함",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/PatrolPath.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/PatrolPath.cs",
-    "file_name": "PatrolPath.cs",
-    "content_hash": "ab7587fb1a30e0db329814b2e7440edff3633357",
-    "size": 815,
-    "line_count": 28,
-    "namespace": "Platformer.Mechanics",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "PatrolPath",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": true,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PatrolPath",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "CreateMover",
-      "Mover",
-      "Reset"
-    ],
-    "fields": [],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "UnityEngine",
-      "Platformer",
-      "Mechanics",
-      "This",
-      "One",
       "Vector2",
-      "Create",
-      "Mover",
-      "CreateMover",
-      "Reset",
+      "Vector2Int",
+      "WaitForSeconds",
+      "GrowthCandidate",
       "Vector3"
     ],
-    "component_access_types": [],
-    "created_types": [
-      "Mover"
-    ],
     "singleton_access_types": [],
     "string_literals": [
-      "speed"
+      "Brick Prefabs",
+      "Fixed Bricks",
+      "Grid",
+      "Map Position",
+      "Growth Timing",
+      "Row Weight",
+      "Row Priority",
+      "Connection Rule",
+      "Growth Directions",
+      "Down",
+      "Left",
+      "Right",
+      "Start Bricks",
+      "Fixed Brick Prefab�� �����ϴ�.",
+      "FixedBrick_{data.cell.y}_{data.cell.x}",
+      "Brick Prefab�� �����ϴ�.",
+      "Brick_{cell.y}_{cell.x}"
     ],
-    "numeric_literals": [],
+    "numeric_literals": [
+      1,
+      7,
+      20,
+      0.8,
+      0.4,
+      7.6,
+      4,
+      1,
+      2,
+      0.2,
+      5,
+      10,
+      0
+    ],
     "guessed_roles": [
       "runtime",
-      "player",
-      "manager"
+      "manager",
+      "data",
+      "save-load"
     ],
     "summary_signals": [
-      "런타임 컴포넌트"
+      "런타임 컴포넌트",
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
     ]
   },
   {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/PatrolPath.Mover.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/PatrolPath.Mover.cs",
-    "file_name": "PatrolPath.Mover.cs",
-    "content_hash": "ec19fd415b6ee59d49f78e020094bb2bb6d7256e",
-    "size": 1149,
-    "line_count": 38,
-    "namespace": "Platformer.Mechanics",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "PatrolPath",
-        "kind": "class",
-        "access": "public",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": true,
-        "is_generic": false
-      },
-      {
-        "name": "oscillates",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "Mover",
-        "kind": "class",
-        "access": "public",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PatrolPath",
-    "unity_type": "None",
-    "methods": [
-      "Mover"
-    ],
-    "fields": [
-      {
-        "name": "path",
-        "type": "PatrolPath",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "p",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "duration",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "startTime",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "UnityEngine",
-      "Platformer",
-      "Mechanics",
-      "The",
-      "Get",
-      "Vector2",
-      "Position",
-      "InverseLerp",
-      "PingPong",
-      "TransformPoint",
-      "Lerp"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player",
-      "runtime"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/PlayAudioClip.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/PlayAudioClip.cs",
-    "file_name": "PlayAudioClip.cs",
-    "content_hash": "648c3ff1be13e81ced0c5245a61fc04654559a97",
-    "size": 1062,
-    "line_count": 35,
+    "file_id": "PaddlePrototype/Assets/Scripts/enemy.cs",
+    "path": "PaddlePrototype/Assets/Scripts/enemy.cs",
+    "file_name": "enemy.cs",
+    "content_hash": "9b3ff471adc5e261f5beb8ad35ed66dfbd2e5812",
+    "size": 6764,
+    "line_count": 259,
     "namespace": "",
     "using_list": [
       "System.Collections",
@@ -3711,396 +728,176 @@
     ],
     "classes": [
       {
-        "name": "allows",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "PlayAudioClip",
+        "name": "EnemyGridMover",
         "kind": "class",
         "access": "public",
         "base_types": [
-          "StateMachineBehaviour"
+          "MonoBehaviour"
         ],
         "interfaces": [],
         "attributes": [],
         "is_partial": false,
         "is_generic": false
-      }
-    ],
-    "main_class_name": "PlayAudioClip",
-    "unity_type": "None",
-    "methods": [
-      "be",
-      "OnStateUpdate"
-    ],
-    "fields": [
-      {
-        "name": "t",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
       },
       {
-        "name": "modulus",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "clip",
-        "type": "AudioClip",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "last_t",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "nt",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 3,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "AudioClip",
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "This",
-      "StateMachineBehaviour",
-      "The",
-      "If",
-      "OnStateUpdate",
-      "Animator",
-      "AnimatorStateInfo",
-      "AudioSource",
-      "PlayClipAtPoint"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      0.5,
-      0,
-      1
-    ],
-    "guessed_roles": [
-      "runtime"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/PlayerController.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/PlayerController.cs",
-    "file_name": "PlayerController.cs",
-    "content_hash": "c976094f30dee2ef2db0f65480c3db0a3714a808",
-    "size": 4325,
-    "line_count": 141,
-    "namespace": "Platformer.Mechanics",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "UnityEngine",
-      "Platformer.Gameplay",
-      "Platformer.Model",
-      "Platformer.Core"
-    ],
-    "classes": [
-      {
-        "name": "used",
+        "name": "MoveCommand",
         "kind": "class",
-        "access": "internal",
+        "access": "public",
         "base_types": [],
         "interfaces": [],
         "attributes": [],
         "is_partial": false,
         "is_generic": false
-      },
-      {
-        "name": "PlayerController",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "KinematicObject"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
       }
     ],
-    "main_class_name": "PlayerController",
-    "unity_type": "None",
+    "main_class_name": "EnemyGridMover",
+    "unity_type": "MonoBehaviour",
     "methods": [
-      "Awake",
-      "Update",
-      "UpdateJumpState",
-      "ComputeVelocity"
+      "Init",
+      "MoveRoutine",
+      "WaitForSeconds",
+      "TryMoveByCommand",
+      "AdvanceCommand",
+      "CompleteCurrentCommand",
+      "MoveToCell",
+      "StopMoving",
+      "OnCollisionEnter2D"
     ],
     "fields": [
       {
-        "name": "jumpAudio",
-        "type": "AudioClip",
+        "name": "direction",
+        "type": "Vector2Int",
         "access": "public",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "respawnAudio",
-        "type": "AudioClip",
+        "name": "sectionLoopEnd",
+        "type": "bool",
         "access": "public",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "ouchAudio",
-        "type": "AudioClip",
+        "name": "stopYMoveAtRow",
+        "type": "bool",
         "access": "public",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "maxSpeed",
+        "name": "stopYRow",
+        "type": "int",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "brickManager",
+        "type": "BrickManager",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "currentCell",
+        "type": "Vector2Int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "commands",
+        "type": "List<MoveCommand>",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "moveInterval",
         "type": "float",
-        "access": "public",
+        "access": "private",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "jumpTakeOffSpeed",
+        "name": "moveSpeed",
         "type": "float",
-        "access": "public",
+        "access": "private",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "jumpState",
-        "type": "JumpState",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "stopJump",
+        "name": "loopAllCommands",
         "type": "bool",
         "access": "private",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "health",
-        "type": "Health",
-        "access": "public",
+        "name": "commandIndex",
+        "type": "int",
+        "access": "private",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "controlEnabled",
+        "name": "commandRepeatCounter",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "isMoving",
         "type": "bool",
-        "access": "public",
+        "access": "private",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "jump",
-        "type": "bool",
+        "name": "moveRoutine",
+        "type": "Coroutine",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "safety",
+        "type": "int",
         "access": "internal",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "move",
-        "type": "Vector2",
+        "name": "command",
+        "type": "MoveCommand",
         "access": "internal",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "spriteRenderer",
-        "type": "SpriteRenderer",
+        "name": "direction",
+        "type": "Vector2Int",
         "access": "internal",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "animator",
-        "type": "Animator",
+        "name": "nextCell",
+        "type": "Vector2Int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "endIndex",
+        "type": "int",
         "access": "internal",
         "serialized": false,
         "is_static": false
       }
     ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Awake",
-      "Update"
-    ],
-    "has_update": true,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": true,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 8,
-    "get_component_count": 5,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "AudioClip",
-      "float",
-      "JumpState",
-      "bool",
-      "Health",
-      "Vector2",
-      "SpriteRenderer",
-      "Animator",
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "Platformer",
-      "Gameplay",
-      "Core",
-      "Simulation",
-      "Model",
-      "Mechanics",
-      "This",
-      "It",
-      "AnimationController",
-      "KinematicObject",
-      "Max",
-      "Initial",
-      "Grounded",
-      "Collider2D",
-      "AudioSource",
-      "PlatformerModel",
-      "GetModel",
-      "Bounds",
-      "Awake",
-      "GetComponent",
-      "Update",
-      "Input",
-      "GetAxis",
-      "Horizontal",
-      "GetButtonDown",
-      "Jump",
-      "PrepareToJump",
-      "GetButtonUp",
-      "Schedule",
-      "PlayerStopJump",
-      "UpdateJumpState",
-      "Jumping",
-      "IsGrounded",
-      "PlayerJumped",
-      "InFlight",
-      "PlayerLanded",
-      "Landed",
-      "ComputeVelocity",
-      "SetBool",
-      "SetFloat",
-      "Abs"
-    ],
-    "component_access_types": [
-      "Health",
-      "AudioSource",
-      "Collider2D",
-      "SpriteRenderer",
-      "Animator"
-    ],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "Horizontal",
-      "Jump",
-      "grounded",
-      "velocityX"
-    ],
-    "numeric_literals": [
-      7,
-      0.01
-    ],
-    "guessed_roles": [
-      "player",
-      "runtime",
-      "ui"
-    ],
-    "summary_signals": [
-      "Update 기반 처리 존재",
-      "UI 관련 로직 포함",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/SpawnPoint.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/SpawnPoint.cs",
-    "file_name": "SpawnPoint.cs",
-    "content_hash": "09d297c938163ae7f1cbb6cb67e8e7ed24e37ed6",
-    "size": 203,
-    "line_count": 12,
-    "namespace": "Platformer.Mechanics",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "SpawnPoint",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "SpawnPoint",
-    "unity_type": "MonoBehaviour",
-    "methods": [],
-    "fields": [],
     "properties": [],
     "events": [],
     "unity_messages": [],
@@ -4112,196 +909,113 @@
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
+    "public_field_count": 4,
+    "get_component_count": 1,
     "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 4,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
-      "UnityEngine",
-      "Platformer",
-      "Mechanics",
-      "Marks"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "scene",
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/TokenController.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/TokenController.cs",
-    "file_name": "TokenController.cs",
-    "content_hash": "21d0591155cc34c2bb0210ed55944be5fd4d7181",
-    "size": 2547,
-    "line_count": 71,
-    "namespace": "Platformer.Mechanics",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "animates",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "TokenController",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "TokenController",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "FindAllTokensInScene",
-      "Awake",
-      "Update"
-    ],
-    "fields": [
-      {
-        "name": "frameRate",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "tokens",
-        "type": "TokenInstance[]",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "nextFrameTime",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "token",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Awake",
-      "Update"
-    ],
-    "has_update": true,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": true,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 2,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
+      "Vector2Int",
+      "bool",
+      "int",
+      "BrickManager",
       "float",
-      "TokenInstance",
+      "Coroutine",
+      "System",
+      "Collections",
+      "Generic",
       "UnityEngine",
-      "Platformer",
-      "Mechanics",
-      "This",
-      "If",
-      "Frames",
-      "Instances",
-      "ContextMenu",
-      "Find",
-      "All",
-      "Tokens",
-      "FindAllTokensInScene",
-      "Object",
-      "FindObjectsOfType",
-      "Awake",
-      "Length",
-      "Register",
-      "Update",
-      "SetActive"
+      "BlockedMoveAction",
+      "Wait",
+      "SkipToNextCommand",
+      "Serializable",
+      "Move",
+      "Repeat",
+      "Min",
+      "Section",
+      "Loop",
+      "Limit",
+      "Blocked",
+      "Init",
+      "Clear",
+      "GetCellWorldPosition",
+      "StopCoroutine",
+      "StartCoroutine",
+      "MoveRoutine",
+      "TryMoveByCommand",
+      "WaitForSeconds",
+      "Count",
+      "CompleteCurrentCommand",
+      "IsCellOccupied",
+      "MoveToCell",
+      "AdvanceCommand",
+      "ContainsKey",
+      "Clamp",
+      "Remove",
+      "StopMoving",
+      "Vector3",
+      "Distance",
+      "MoveTowards",
+      "OnCollisionEnter2D",
+      "Collision2D",
+      "CompareTag",
+      "Ball",
+      "BallController",
+      "GetComponent",
+      "DecreaseByBlockHit",
+      "Destroy"
     ],
-    "component_access_types": [],
-    "created_types": [],
+    "component_access_types": [
+      "BallController"
+    ],
+    "created_types": [
+      "WaitForSeconds"
+    ],
     "singleton_access_types": [],
     "string_literals": [
-      "Frames per second at which tokens are animated.",
-      "Find All Tokens"
+      "Move",
+      "Repeat",
+      "Section Loop",
+      "�ǵ��ư� Ŀ�ǵ� ��ȣ",
+      "���� �ݺ� Ƚ��",
+      "Y Limit",
+      "Blocked",
+      "Ball"
     ],
     "numeric_literals": [
-      12,
-      1
+      6,
+      20,
+      0.01
     ],
     "guessed_roles": [
+      "combat",
       "runtime",
-      "manager",
-      "scene",
-      "save-load"
+      "player",
+      "manager"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
-      "Update 기반 처리 존재",
-      "저장/불러오기 관련 로직 포함"
+      "전투 계열 로직 포함",
+      "컴포넌트 조회 사용"
     ]
   },
   {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/TokenInstance.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/TokenInstance.cs",
-    "file_name": "TokenInstance.cs",
-    "content_hash": "34b98458de9ed5b7c35ae3f1a59da9533e72c347",
-    "size": 2219,
-    "line_count": 62,
-    "namespace": "Platformer.Mechanics",
+    "file_id": "PaddlePrototype/Assets/Scripts/game_manager.cs",
+    "path": "PaddlePrototype/Assets/Scripts/game_manager.cs",
+    "file_name": "game_manager.cs",
+    "content_hash": "ebe0b784f2411961494a95c0183f5aa8fb036f5e",
+    "size": 2420,
+    "line_count": 100,
+    "namespace": "",
     "using_list": [
-      "Platformer.Gameplay",
+      "System.Collections.Generic",
       "UnityEngine"
     ],
     "classes": [
       {
-        "name": "contains",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "TokenInstance",
+        "name": "GameManager",
         "kind": "class",
         "access": "public",
         "base_types": [
@@ -4311,69 +1025,53 @@
         "attributes": [],
         "is_partial": false,
         "is_generic": false
+      },
+      {
+        "name": "EnemySpawnData",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
       }
     ],
-    "main_class_name": "TokenInstance",
+    "main_class_name": "GameManager",
     "unity_type": "MonoBehaviour",
     "methods": [
-      "Awake",
-      "OnTriggerEnter2D",
-      "OnPlayerEnter"
+      "Vector2Int",
+      "Start",
+      "SpawnAllEnemies",
+      "SpawnEnemy",
+      "ClearEnemies"
     ],
     "fields": [
       {
-        "name": "tokenCollectAudio",
-        "type": "AudioClip",
+        "name": "enemyPrefab",
+        "type": "GameObject",
         "access": "public",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "randomAnimationStartTime",
-        "type": "bool",
+        "name": "moveInterval",
+        "type": "float",
         "access": "public",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "sprites",
-        "type": "Sprite[]",
-        "access": "internal",
+        "name": "moveSpeed",
+        "type": "float",
+        "access": "public",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "_renderer",
-        "type": "SpriteRenderer",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "tokenIndex",
-        "type": "int",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "controller",
-        "type": "TokenController",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "frame",
-        "type": "int",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "collected",
+        "name": "loopAllCommands",
         "type": "bool",
-        "access": "internal",
+        "access": "public",
         "serialized": false,
         "is_static": false
       }
@@ -4381,397 +1079,103 @@
     "properties": [],
     "events": [],
     "unity_messages": [
-      "Awake"
+      "Start"
     ],
     "has_update": false,
     "has_fixed_update": false,
     "has_late_update": false,
-    "has_awake": true,
-    "has_start": false,
+    "has_awake": false,
+    "has_start": true,
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 0,
-    "public_field_count": 2,
-    "get_component_count": 2,
-    "find_call_count": 0,
+    "public_field_count": 4,
+    "get_component_count": 1,
+    "find_call_count": 1,
     "new_keyword_count": 1,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
-      "AudioClip",
-      "bool",
-      "Sprite",
-      "SpriteRenderer",
-      "int",
-      "TokenController",
-      "Platformer",
-      "Gameplay",
-      "UnityEngine",
-      "Core",
-      "Simulation",
-      "Mechanics",
-      "This",
-      "It",
-      "RequireComponent",
-      "Collider2D",
-      "If",
-      "Awake",
-      "GetComponent",
-      "Length",
-      "OnTriggerEnter2D",
-      "OnPlayerEnter",
-      "PlayerController",
-      "Schedule",
-      "PlayerTokenCollision"
-    ],
-    "component_access_types": [
-      "SpriteRenderer",
-      "PlayerController"
-    ],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "If true, animation will start at a random position in the sequence.",
-      "List of frames that make up the animation."
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "runtime",
-      "player",
-      "ui",
-      "manager",
-      "scene"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "UI 관련 로직 포함",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Mechanics/VictoryZone.cs",
-    "path": "New Unity Project/Assets/Scripts/Mechanics/VictoryZone.cs",
-    "file_name": "VictoryZone.cs",
-    "content_hash": "a3fad2445e99530fc9bb36b652cc34c3db0f8d9a",
-    "size": 604,
-    "line_count": 22,
-    "namespace": "Platformer.Mechanics",
-    "using_list": [
-      "Platformer.Gameplay",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "VictoryZone",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "VictoryZone",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "OnTriggerEnter2D"
-    ],
-    "fields": [],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 1,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Platformer",
-      "Gameplay",
-      "UnityEngine",
-      "Core",
-      "Simulation",
-      "Mechanics",
-      "Marks",
-      "OnTriggerEnter2D",
-      "Collider2D",
-      "GetComponent",
-      "PlayerController",
-      "Schedule",
-      "PlayerEnteredVictoryZone"
-    ],
-    "component_access_types": [
-      "PlayerController"
-    ],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "player",
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/Model/PlatformerModel.cs",
-    "path": "New Unity Project/Assets/Scripts/Model/PlatformerModel.cs",
-    "file_name": "PlatformerModel.cs",
-    "content_hash": "264d5c11c84a6efe3c2e93e0b246d59b74e864e0",
-    "size": 1269,
-    "line_count": 42,
-    "namespace": "Platformer.Model",
-    "using_list": [
-      "Platformer.Mechanics",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "should",
-        "kind": "class",
-        "access": "internal",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "PlatformerModel",
-        "kind": "class",
-        "access": "public",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PlatformerModel",
-    "unity_type": "None",
-    "methods": [],
-    "fields": [
-      {
-        "name": "virtualCamera",
-        "type": "Cinemachine.CinemachineVirtualCamera",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "player",
-        "type": "PlayerController",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "spawnPoint",
-        "type": "Transform",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "jumpModifier",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "jumpDeceleration",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 5,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Cinemachine.CinemachineVirtualCamera",
-      "PlayerController",
       "float",
-      "Platformer",
-      "Mechanics",
-      "UnityEngine",
-      "Model",
-      "The",
-      "This",
-      "It",
-      "GameController",
-      "System",
-      "Serializable",
-      "Cinemachine",
-      "CinemachineVirtualCamera"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      1.5,
-      0.5
-    ],
-    "guessed_roles": [
-      "player",
-      "scene",
-      "data"
-    ],
-    "summary_signals": []
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/UI/MainUIController.cs",
-    "path": "New Unity Project/Assets/Scripts/UI/MainUIController.cs",
-    "file_name": "MainUIController.cs",
-    "content_hash": "b23bdd55e2ef7dd1c0d2e581cbf1e35b121dc35e",
-    "size": 670,
-    "line_count": 29,
-    "namespace": "Platformer.UI",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "MainUIController",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "MainUIController",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "SetActivePanel",
-      "OnEnable"
-    ],
-    "fields": [
-      {
-        "name": "panels",
-        "type": "GameObject[]",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "active",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "g",
-        "type": "var",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "OnEnable"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": true,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
+      "bool",
       "System",
       "Collections",
       "Generic",
       "UnityEngine",
-      "Platformer",
-      "UI",
-      "SetActivePanel",
-      "Length",
-      "SetActive",
-      "OnEnable"
+      "Serializable",
+      "Spawn",
+      "Vector2Int",
+      "Move",
+      "Commands",
+      "EnemyGridMover",
+      "MoveCommand",
+      "Setting",
+      "Enemy",
+      "BrickManager",
+      "Start",
+      "SpawnAllEnemies",
+      "FindAnyObjectByType",
+      "ClearEnemies",
+      "SpawnEnemy",
+      "Vector3",
+      "GetCellWorldPosition",
+      "Instantiate",
+      "Quaternion",
+      "GetComponent",
+      "AddComponent",
+      "Init",
+      "Add",
+      "Destroy",
+      "Clear",
+      "GetChild"
     ],
-    "component_access_types": [],
-    "created_types": [],
+    "component_access_types": [
+      "EnemyGridMover"
+    ],
+    "created_types": [
+      "Vector2Int"
+    ],
     "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
+    "string_literals": [
+      "Spawn",
+      "Move Commands",
+      "Move Setting",
+      "Enemy"
+    ],
+    "numeric_literals": [
+      1,
+      3
+    ],
     "guessed_roles": [
-      "ui",
-      "runtime"
+      "runtime",
+      "player",
+      "combat",
+      "manager",
+      "data"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
-      "UI 관련 로직 포함"
+      "전투 계열 로직 포함",
+      "컴포넌트 조회 사용",
+      "Find 계열 탐색 사용"
     ]
   },
   {
-    "file_id": "New Unity Project/Assets/Scripts/UI/MetaGameController.cs",
-    "path": "New Unity Project/Assets/Scripts/UI/MetaGameController.cs",
-    "file_name": "MetaGameController.cs",
-    "content_hash": "34af0066302fc788c0118acee293987cf781bd12",
-    "size": 1968,
-    "line_count": 74,
-    "namespace": "Platformer.UI",
+    "file_id": "PaddlePrototype/Assets/Scripts/paddle_movement_ground.cs",
+    "path": "PaddlePrototype/Assets/Scripts/paddle_movement_ground.cs",
+    "file_name": "paddle_movement_ground.cs",
+    "content_hash": "4679e091ab68f812232b0b121db15d7b26372924",
+    "size": 1679,
+    "line_count": 52,
+    "namespace": "",
     "using_list": [
-      "Platformer.Mechanics",
-      "Platformer.UI",
-      "UnityEngine"
+      "UnityEngine",
+      "UnityEngine.InputSystem"
     ],
     "classes": [
       {
-        "name": "MetaGameController",
+        "name": "GroundPadController",
         "kind": "class",
         "access": "public",
         "base_types": [
@@ -4783,41 +1187,40 @@
         "is_generic": false
       }
     ],
-    "main_class_name": "MetaGameController",
+    "main_class_name": "GroundPadController",
     "unity_type": "MonoBehaviour",
     "methods": [
-      "gameplay",
-      "OnEnable",
-      "ToggleMainMenu",
-      "_ToggleMainMenu",
-      "Update"
+      "Start",
+      "Vector3",
+      "Update",
+      "MovePad"
     ],
     "fields": [
       {
-        "name": "mainMenu",
-        "type": "MainUIController",
-        "access": "public",
+        "name": "mainCamera",
+        "type": "Camera",
+        "access": "private",
+        "serialized": true,
+        "is_static": false
+      },
+      {
+        "name": "paddleCollider",
+        "type": "Collider2D",
+        "access": "private",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "gamePlayCanvasii",
-        "type": "Canvas[]",
-        "access": "public",
+        "name": "tr",
+        "type": "Transform",
+        "access": "private",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "gameController",
-        "type": "GameController",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "showMainCanvas",
+        "name": "isCollisionOn",
         "type": "bool",
-        "access": "internal",
+        "access": "private",
         "serialized": false,
         "is_static": false
       }
@@ -4825,268 +1228,94 @@
     "properties": [],
     "events": [],
     "unity_messages": [
-      "OnEnable",
+      "Start",
       "Update"
     ],
     "has_update": true,
     "has_fixed_update": false,
     "has_late_update": false,
     "has_awake": false,
-    "has_start": false,
-    "has_on_enable": true,
+    "has_start": true,
+    "has_on_enable": false,
     "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 3,
-    "get_component_count": 0,
+    "serialize_field_count": 1,
+    "public_field_count": 0,
+    "get_component_count": 2,
     "find_call_count": 0,
-    "new_keyword_count": 0,
+    "new_keyword_count": 4,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
-      "MainUIController",
-      "Canvas",
-      "GameController",
+      "Camera",
+      "Collider2D",
       "bool",
-      "Platformer",
-      "Mechanics",
-      "UI",
       "UnityEngine",
-      "The",
-      "Main",
-      "Menu",
-      "Gameplay",
-      "OnEnable",
-      "Turn",
-      "ToggleMainMenu",
-      "SetActive",
+      "InputSystem",
+      "Start",
+      "GetComponent",
+      "Contains",
+      "Vector3",
       "Update",
-      "Input",
-      "GetButtonDown"
+      "Mouse",
+      "MovePad",
+      "Vector2",
+      "ReadValue",
+      "ScreenToWorldPoint",
+      "MoveTowards",
+      "Clamp"
     ],
-    "component_access_types": [],
-    "created_types": [],
+    "component_access_types": [
+      "Collider2D",
+      "Transform"
+    ],
+    "created_types": [
+      "Vector3"
+    ],
     "singleton_access_types": [],
     "string_literals": [
-      "show",
-      "Menu"
+      "paddle_down"
     ],
-    "numeric_literals": [],
+    "numeric_literals": [
+      15,
+      0.7,
+      1,
+      0.5,
+      2,
+      3,
+      5.5
+    ],
     "guessed_roles": [
-      "ui",
       "runtime",
-      "player"
+      "player",
+      "ui",
+      "save-load"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
       "Update 기반 처리 존재",
-      "UI 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Scripts/View/AnimatedTile.cs",
-    "path": "New Unity Project/Assets/Scripts/View/AnimatedTile.cs",
-    "file_name": "AnimatedTile.cs",
-    "content_hash": "12c95d546d17c4c3bf7d24691914c84e1d1bb497",
-    "size": 3484,
-    "line_count": 97,
-    "namespace": "Platformer.View",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "UnityEditor",
-      "UnityEngine",
-      "UnityEngine.Tilemaps"
-    ],
-    "classes": [
-      {
-        "name": "AnimatedTile",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "TileBase"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "AnimatedTileEditor",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Editor"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "AnimatedTile",
-    "unity_type": "None",
-    "methods": [
-      "GetTileData",
-      "GetTileAnimationData",
-      "OnInspectorGUI",
-      "typeof"
-    ],
-    "fields": [
-      {
-        "name": "m_AnimatedSprites",
-        "type": "Sprite[]",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "m_MinSpeed",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "m_MaxSpeed",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "m_AnimationStartTime",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "m_TileColliderType",
-        "type": "Tile.ColliderType",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 5,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Sprite",
-      "float",
-      "Tile.ColliderType",
-      "System",
-      "Collections",
-      "Generic",
-      "UNITY_EDITOR",
-      "UnityEditor",
-      "UnityEngine",
-      "Tilemaps",
-      "Platformer",
-      "View",
-      "Serializable",
-      "CreateAssetMenu",
-      "New",
-      "Animated",
-      "Tile",
-      "Tiles",
-      "TileBase",
-      "ColliderType",
-      "GetTileData",
-      "Vector3Int",
-      "ITilemap",
-      "TileData",
-      "Matrix4x4",
-      "Color",
-      "Length",
-      "GetTileAnimationData",
-      "TileAnimationData",
-      "CustomEditor",
-      "Editor",
-      "OnInspectorGUI",
-      "EditorGUI",
-      "BeginChangeCheck",
-      "EditorGUILayout",
-      "DelayedIntField",
-      "Number",
-      "Sprites",
-      "Array",
-      "Resize",
-      "LabelField",
-      "Place",
-      "Space",
-      "ObjectField",
-      "FloatField",
-      "Minimum",
-      "Speed",
-      "Maximum",
-      "Start",
-      "EnumPopup",
-      "Collider",
-      "Type",
-      "EndChangeCheck",
-      "EditorUtility",
-      "SetDirty"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "New Animated Tile",
-      "Tiles/Animated Tile",
-      "Number of Animated Sprites",
-      "Place sprites shown based on the order of animation.",
-      "Sprite ",
-      "Minimum Speed",
-      "Maximum Speed",
-      "Start Time",
-      "Collider Type"
-    ],
-    "numeric_literals": [
-      1,
-      0
-    ],
-    "guessed_roles": [
-      "ui",
-      "data",
-      "runtime",
-      "combat"
-    ],
-    "summary_signals": [
+      "인스펙터 직렬화 필드 사용",
       "UI 관련 로직 포함",
-      "전투 계열 로직 포함"
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
     ]
   },
   {
-    "file_id": "New Unity Project/Assets/Scripts/View/ParallaxLayer.cs",
-    "path": "New Unity Project/Assets/Scripts/View/ParallaxLayer.cs",
-    "file_name": "ParallaxLayer.cs",
-    "content_hash": "2016e305900f86e550a76d2cf032bca43cfd42b9",
-    "size": 743,
-    "line_count": 29,
-    "namespace": "Platformer.View",
+    "file_id": "PaddlePrototype/Assets/Scripts/paddle_movement_upper.cs",
+    "path": "PaddlePrototype/Assets/Scripts/paddle_movement_upper.cs",
+    "file_name": "paddle_movement_upper.cs",
+    "content_hash": "696dd22ff2aa9ad614c32b06ace81d6f81997cb9",
+    "size": 2289,
+    "line_count": 73,
+    "namespace": "",
     "using_list": [
-      "UnityEngine"
+      "UnityEngine",
+      "UnityEngine.InputSystem",
+      "UnityEngine.U2D"
     ],
     "classes": [
       {
-        "name": "ParallaxLayer",
+        "name": "UpperPadController",
         "kind": "class",
         "access": "public",
         "base_types": [
@@ -5098,23 +1327,68 @@
         "is_generic": false
       }
     ],
-    "main_class_name": "ParallaxLayer",
+    "main_class_name": "UpperPadController",
     "unity_type": "MonoBehaviour",
     "methods": [
-      "Awake",
-      "LateUpdate"
+      "Start",
+      "Vector3",
+      "Update",
+      "MovePad",
+      "SetAlpha"
     ],
     "fields": [
       {
-        "name": "movementScale",
-        "type": "Vector3",
-        "access": "public",
+        "name": "transparentAlpha",
+        "type": "float",
+        "access": "private",
+        "serialized": true,
+        "is_static": false
+      },
+      {
+        "name": "mainCamera",
+        "type": "Camera",
+        "access": "private",
         "serialized": false,
         "is_static": false
       },
       {
-        "name": "_camera",
+        "name": "shapeRenderer",
+        "type": "SpriteShapeRenderer",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "originalColor",
+        "type": "Color",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "paddleCollider",
+        "type": "Collider2D",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "tr",
         "type": "Transform",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "isCollisionOn",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "newColor",
+        "type": "Color",
         "access": "internal",
         "serialized": false,
         "is_static": false
@@ -5123,158 +1397,81 @@
     "properties": [],
     "events": [],
     "unity_messages": [
-      "Awake",
-      "LateUpdate"
+      "Start",
+      "Update"
     ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": true,
-    "has_awake": true,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Vector3",
-      "UnityEngine",
-      "Platformer",
-      "View",
-      "Used",
-      "This",
-      "Movement",
-      "Awake",
-      "Camera",
-      "LateUpdate",
-      "Scale"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "runtime",
-      "player"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트"
-    ]
-  },
-  {
-    "file_id": "New Unity Project/Assets/Tutorials/BuildAndPublish/Criteria/PublishCriteria.cs",
-    "path": "New Unity Project/Assets/Tutorials/BuildAndPublish/Criteria/PublishCriteria.cs",
-    "file_name": "PublishCriteria.cs",
-    "content_hash": "2707ed91c77226225023afc713cf1ceb0082afa0",
-    "size": 1386,
-    "line_count": 45,
-    "namespace": "Unity.LEGO.Tutorials",
-    "using_list": [
-      "Unity.Connect.Share.Editor",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "PublishCriteria",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "ScriptableObject"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PublishCriteria",
-    "unity_type": "ScriptableObject",
-    "methods": [
-      "IsNotDisplayingFirstTimeInstructions",
-      "IsUserLoggedIn",
-      "IsBuildBeingUploaded",
-      "IsBuildPublished",
-      "IsWebGLPublisherOpen"
-    ],
-    "fields": [
-      {
-        "name": "shareWindow",
-        "type": "ShareWindow",
-        "access": "internal",
-        "serialized": false,
-        "is_static": true
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
+    "has_update": true,
     "has_fixed_update": false,
     "has_late_update": false,
     "has_awake": false,
-    "has_start": false,
+    "has_start": true,
     "has_on_enable": false,
     "has_on_disable": false,
-    "serialize_field_count": 0,
+    "serialize_field_count": 1,
     "public_field_count": 0,
-    "get_component_count": 0,
+    "get_component_count": 3,
     "find_call_count": 0,
-    "new_keyword_count": 0,
+    "new_keyword_count": 4,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
-      "ShareWindow",
-      "Unity",
-      "Connect",
-      "Share",
-      "Editor",
+      "float",
+      "Camera",
+      "SpriteShapeRenderer",
+      "Color",
+      "Collider2D",
+      "bool",
       "UnityEngine",
-      "LEGO",
-      "Tutorials",
-      "Contaisn",
-      "Build",
-      "And",
-      "Publish",
-      "CreateAssetMenu",
-      "Microgame",
-      "IsNotDisplayingFirstTimeInstructions",
-      "IsWebGLPublisherOpen",
-      "TAB_INTRODUCTION",
-      "IsUserLoggedIn",
-      "TAB_NOT_LOGGED_IN",
-      "IsBuildBeingUploaded",
-      "Store",
-      "ShareStep",
-      "Upload",
-      "IsBuildPublished",
-      "IsNullOrEmpty",
-      "FindInstance"
+      "InputSystem",
+      "U2D",
+      "Start",
+      "GetComponent",
+      "Vector3",
+      "Update",
+      "Mouse",
+      "SetAlpha",
+      "MovePad",
+      "Vector2",
+      "ReadValue",
+      "ScreenToWorldPoint",
+      "MoveTowards",
+      "Clamp"
     ],
-    "component_access_types": [],
-    "created_types": [],
+    "component_access_types": [
+      "SpriteShapeRenderer",
+      "Collider2D",
+      "Transform"
+    ],
+    "created_types": [
+      "Vector3"
+    ],
     "singleton_access_types": [],
-    "string_literals": [
-      "PublishCriteria",
-      "Microgame/Tutorials/PublishCriteria"
+    "string_literals": [],
+    "numeric_literals": [
+      15,
+      0.7,
+      1,
+      0.3,
+      0.5,
+      2,
+      1,
+      3,
+      5.5
     ],
-    "numeric_literals": [],
     "guessed_roles": [
-      "data",
+      "runtime",
+      "player",
       "ui",
-      "save-load",
-      "manager"
+      "save-load"
     ],
     "summary_signals": [
-      "데이터 자산 중심 구조",
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "인스펙터 직렬화 필드 사용",
       "UI 관련 로직 포함",
-      "저장/불러오기 관련 로직 포함"
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
     ]
   }
 ]
