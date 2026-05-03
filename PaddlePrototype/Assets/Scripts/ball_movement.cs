@@ -103,4 +103,16 @@ public class BallController : MonoBehaviour
             Gizmos.DrawLine(paddlePos + new Vector3(centerZone, 0.5f, 0), paddlePos + new Vector3(centerZone, -0.5f, 0));
         }
     }
+
+    //벽돌과 충돌 시 속도 감소
+    public void DecreaseByBlockHit()
+    {
+        speed = Mathf.Max(speed - blockSpeedDecrease, baseSpeed);
+        power = Mathf.Max(power - blockPowerDecrease, basePower);
+
+        if (rb != null && rb.linearVelocity != Vector2.zero)
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * speed;
+        }
+    }
 }
