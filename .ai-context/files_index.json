@@ -3,9 +3,9 @@
     "file_id": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "path": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "file_name": "ball_movement.cs",
-    "content_hash": "7e75b24f716fd7db25de5a945abbf5a6b1628b0e",
-    "size": 4279,
-    "line_count": 118,
+    "content_hash": "eb7000d7b1ffd2ae4e9a3613733154249134d99f",
+    "size": 5642,
+    "line_count": 167,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -28,25 +28,20 @@
     "unity_type": "MonoBehaviour",
     "methods": [
       "Start",
-      "Vector3",
-      "LaunchBall",
       "Vector2",
-      "OnCollisionStay2D",
-      "FixedUpdate",
+      "Vector3",
+      "Update",
+      "MoveBall",
+      "UpdateDirection",
       "OnDrawGizmos",
-      "DecreaseByBlockHit"
+      "LaunchBall",
+      "OnCollisionStay2D",
+      "FixedUpdate"
     ],
     "fields": [
       {
         "name": "power",
         "type": "float",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "rb",
-        "type": "Rigidbody2D",
         "access": "private",
         "serialized": false,
         "is_static": false
@@ -59,9 +54,37 @@
         "is_static": false
       },
       {
+        "name": "direction",
+        "type": "Vector2",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
         "name": "isGameStarted",
         "type": "bool",
         "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "distanceToHit",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "remainingDistance",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "obj",
+        "type": "GameObject",
+        "access": "internal",
         "serialized": false,
         "is_static": false
       },
@@ -73,8 +96,8 @@
         "is_static": false
       },
       {
-        "name": "paddlePos",
-        "type": "Vector3",
+        "name": "returnX",
+        "type": "float",
         "access": "internal",
         "serialized": false,
         "is_static": false
@@ -84,9 +107,10 @@
     "events": [],
     "unity_messages": [
       "Start",
+      "Update",
       "FixedUpdate"
     ],
-    "has_update": false,
+    "has_update": true,
     "has_fixed_update": true,
     "has_late_update": false,
     "has_awake": false,
@@ -95,44 +119,50 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 2,
-    "find_call_count": 1,
-    "new_keyword_count": 7,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 5,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
       "float",
-      "Rigidbody2D",
-      "bool",
-      "Vector3",
-      "UnityEngine",
-      "Start",
-      "GetComponent",
-      "LaunchBall",
       "Vector2",
-      "OnCollisionStay2D",
-      "Collision2D",
+      "bool",
+      "UnityEngine",
+      "LayerMask",
+      "Start",
+      "LaunchBall",
+      "GetComponent",
+      "Vector3",
+      "Update",
+      "MoveBall",
+      "CircleCast",
+      "RaycastHit2D",
+      "Physics2D",
+      "Translate",
+      "Space",
+      "World",
+      "UpdateDirection",
       "Contains",
       "Abs",
-      "Game",
-      "DrawRay",
-      "Color",
-      "FixedUpdate",
+      "Reflect",
       "OnDrawGizmos",
       "Gizmos",
-      "Find",
-      "DrawLine",
-      "DecreaseByBlockHit",
-      "Max"
+      "Color",
+      "DrawWireSphere",
+      "OnCollisionStay2D",
+      "Collision2D",
+      "Game",
+      "DrawRay",
+      "FixedUpdate"
     ],
     "component_access_types": [
-      "Rigidbody2D",
       "Transform"
     ],
     "created_types": [
-      "Vector3",
-      "Vector2"
+      "Vector2",
+      "Vector3"
     ],
     "singleton_access_types": [],
     "string_literals": [
@@ -146,1019 +176,30 @@
       1,
       0.2,
       0.7,
+      0.5,
       1,
+      0.025,
+      2,
+      3,
+      4,
+      0,
       5,
       10,
-      0.5,
       0.1
     ],
     "guessed_roles": [
       "runtime",
+      "player",
       "combat",
       "save-load"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
+      "Update 기반 처리 존재",
       "물리 타이밍 처리 가능성",
       "전투 계열 로직 포함",
       "저장/불러오기 관련 로직 포함",
-      "컴포넌트 조회 사용",
-      "Find 계열 탐색 사용"
-    ]
-  },
-  {
-    "file_id": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
-    "path": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
-    "file_name": "brick_cell.cs",
-    "content_hash": "599b71e5e8e1bd3511c44391bfc20ae03e722316",
-    "size": 941,
-    "line_count": 44,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "BrickCell",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "BrickCell",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Init",
-      "OnCollisionEnter2D",
-      "OnDestroy"
-    ],
-    "fields": [
-      {
-        "name": "manager",
-        "type": "BrickManager",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "cell",
-        "type": "Vector2Int",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "isFixed",
-        "type": "bool",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "version",
-        "type": "int",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "OnDestroy"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 1,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "BrickManager",
-      "Vector2Int",
-      "bool",
-      "int",
-      "UnityEngine",
-      "Init",
-      "OnCollisionEnter2D",
-      "Collision2D",
-      "CompareTag",
-      "Ball",
-      "BallController",
-      "GetComponent",
-      "DecreaseByBlockHit",
-      "Destroy",
-      "OnDestroy",
-      "NotifyBrickDestroyed"
-    ],
-    "component_access_types": [
-      "BallController"
-    ],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "Ball"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "combat",
-      "manager",
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "전투 계열 로직 포함",
       "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "PaddlePrototype/Assets/Scripts/brick_manager.cs",
-    "path": "PaddlePrototype/Assets/Scripts/brick_manager.cs",
-    "file_name": "brick_manager.cs",
-    "content_hash": "48858dd85e06ce39dd592a4b2f6499a4502ed10b",
-    "size": 14169,
-    "line_count": 561,
-    "namespace": "",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "BrickManager",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "GrowthDirection",
-        "kind": "class",
-        "access": "public",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "FixedBrickData",
-        "kind": "class",
-        "access": "public",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "GrowthCandidate",
-        "kind": "struct",
-        "access": "private",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "BrickManager",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "GrowthCandidate",
-      "Vector2",
-      "Vector2Int",
-      "Start",
-      "ResetBricks",
-      "GrowRoutine",
-      "WaitForSeconds",
-      "RespawnMissingStartBricks",
-      "SpawnFixedBricks",
-      "SpawnStartBricks",
-      "SpawnFixedBrick",
-      "GridToWorld",
-      "SpawnBrick",
-      "GetGrowthCandidates",
-      "GetStartConnectedCells",
-      "AddCandidate",
-      "PickByPriorityAndWeight",
-      "PickWeightedCandidate",
-      "Vector3",
-      "FitBrickToCell",
-      "IsValidCell",
-      "NotifyBrickDestroyed",
-      "ClearBricks",
-      "StopGrowing",
-      "IsCellOccupied",
-      "GetCellWorldPosition",
-      "TryWorldToCell",
-      "OnDrawGizmos",
-      "OnDrawGizmosSelected",
-      "DrawGridGizmos"
-    ],
-    "fields": [
-      {
-        "name": "currentVersion",
-        "type": "int",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "name",
-        "type": "string",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "direction",
-        "type": "Vector2Int",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "priority",
-        "type": "int",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "weight",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "cell",
-        "type": "Vector2Int",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "prefabOverride",
-        "type": "GameObject",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "cell",
-        "type": "Vector2Int",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "priority",
-        "type": "int",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "weight",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "occupied",
-        "type": "bool[,]",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "fixedOccupied",
-        "type": "bool[,]",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "growRoutine",
-        "type": "Coroutine",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "clearing",
-        "type": "bool",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "connected",
-        "type": "bool[,]",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "next",
-        "type": "Vector2Int",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "finalWeight",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "finalPriority",
-        "type": "int",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "connected",
-        "type": "bool[,]",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "next",
-        "type": "Vector2Int",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "bestPriority",
-        "type": "int",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "totalWeight",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "current",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "x",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "y",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Start"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 9,
-    "get_component_count": 2,
-    "find_call_count": 0,
-    "new_keyword_count": 22,
-    "coroutine_count": 2,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "int",
-      "string",
-      "Vector2Int",
-      "float",
-      "bool[,]",
-      "Coroutine",
-      "bool",
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "Serializable",
-      "Brick",
-      "Prefabs",
-      "Fixed",
-      "Bricks",
-      "Grid",
-      "Map",
-      "Position",
-      "Vector2",
-      "Growth",
-      "Timing",
-      "Row",
-      "Weight",
-      "Priority",
-      "Connection",
-      "Rule",
-      "Directions",
-      "Down",
-      "Left",
-      "Right",
-      "Start",
-      "ResetBricks",
-      "StopGrowing",
-      "ClearBricks",
-      "SpawnFixedBricks",
-      "SpawnStartBricks",
-      "StartCoroutine",
-      "GrowRoutine",
-      "RespawnMissingStartBricks",
-      "GetGrowthCandidates",
-      "Count",
-      "PickByPriorityAndWeight",
-      "SpawnBrick",
-      "WaitForSeconds",
-      "IsValidCell",
-      "SpawnFixedBrick",
-      "LogError",
-      "Prefab",
-      "Instantiate",
-      "GridToWorld",
-      "Quaternion",
-      "FixedBrick_",
-      "FitBrickToCell",
-      "BrickCell",
-      "GetComponent",
-      "AddComponent",
-      "Init",
-      "Brick_",
-      "GetStartConnectedCells",
-      "AddCandidate",
-      "Enqueue",
-      "Dequeue",
-      "Add",
-      "MaxValue",
-      "PickWeightedCandidate",
-      "Vector3",
-      "NotifyBrickDestroyed",
-      "Destroy",
-      "StopCoroutine",
-      "IsCellOccupied",
-      "GetCellWorldPosition",
-      "TryWorldToCell",
-      "RoundToInt",
-      "OnDrawGizmos",
-      "DrawGridGizmos",
-      "Color",
-      "OnDrawGizmosSelected",
-      "Gizmos",
-      "DrawWireCube"
-    ],
-    "component_access_types": [
-      "BrickCell"
-    ],
-    "created_types": [
-      "Vector2",
-      "Vector2Int",
-      "WaitForSeconds",
-      "GrowthCandidate",
-      "Vector3"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "Brick Prefabs",
-      "Fixed Bricks",
-      "Grid",
-      "Map Position",
-      "Growth Timing",
-      "Row Weight",
-      "Row Priority",
-      "Connection Rule",
-      "Growth Directions",
-      "Down",
-      "Left",
-      "Right",
-      "Start Bricks",
-      "Fixed Brick Prefab�� �����ϴ�.",
-      "FixedBrick_{data.cell.y}_{data.cell.x}",
-      "Brick Prefab�� �����ϴ�.",
-      "Brick_{cell.y}_{cell.x}"
-    ],
-    "numeric_literals": [
-      1,
-      7,
-      20,
-      0.8,
-      0.4,
-      7.6,
-      4,
-      1,
-      2,
-      0.2,
-      5,
-      10,
-      0
-    ],
-    "guessed_roles": [
-      "runtime",
-      "manager",
-      "data",
-      "save-load"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "저장/불러오기 관련 로직 포함",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "PaddlePrototype/Assets/Scripts/enemy.cs",
-    "path": "PaddlePrototype/Assets/Scripts/enemy.cs",
-    "file_name": "enemy.cs",
-    "content_hash": "9b3ff471adc5e261f5beb8ad35ed66dfbd2e5812",
-    "size": 6764,
-    "line_count": 259,
-    "namespace": "",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "EnemyGridMover",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "MoveCommand",
-        "kind": "class",
-        "access": "public",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "EnemyGridMover",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Init",
-      "MoveRoutine",
-      "WaitForSeconds",
-      "TryMoveByCommand",
-      "AdvanceCommand",
-      "CompleteCurrentCommand",
-      "MoveToCell",
-      "StopMoving",
-      "OnCollisionEnter2D"
-    ],
-    "fields": [
-      {
-        "name": "direction",
-        "type": "Vector2Int",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "sectionLoopEnd",
-        "type": "bool",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "stopYMoveAtRow",
-        "type": "bool",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "stopYRow",
-        "type": "int",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "brickManager",
-        "type": "BrickManager",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "currentCell",
-        "type": "Vector2Int",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "commands",
-        "type": "List<MoveCommand>",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "moveInterval",
-        "type": "float",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "moveSpeed",
-        "type": "float",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "loopAllCommands",
-        "type": "bool",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "commandIndex",
-        "type": "int",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "commandRepeatCounter",
-        "type": "int",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "isMoving",
-        "type": "bool",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "moveRoutine",
-        "type": "Coroutine",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "safety",
-        "type": "int",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "command",
-        "type": "MoveCommand",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "direction",
-        "type": "Vector2Int",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "nextCell",
-        "type": "Vector2Int",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "endIndex",
-        "type": "int",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 4,
-    "get_component_count": 1,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 4,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Vector2Int",
-      "bool",
-      "int",
-      "BrickManager",
-      "float",
-      "Coroutine",
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "BlockedMoveAction",
-      "Wait",
-      "SkipToNextCommand",
-      "Serializable",
-      "Move",
-      "Repeat",
-      "Min",
-      "Section",
-      "Loop",
-      "Limit",
-      "Blocked",
-      "Init",
-      "Clear",
-      "GetCellWorldPosition",
-      "StopCoroutine",
-      "StartCoroutine",
-      "MoveRoutine",
-      "TryMoveByCommand",
-      "WaitForSeconds",
-      "Count",
-      "CompleteCurrentCommand",
-      "IsCellOccupied",
-      "MoveToCell",
-      "AdvanceCommand",
-      "ContainsKey",
-      "Clamp",
-      "Remove",
-      "StopMoving",
-      "Vector3",
-      "Distance",
-      "MoveTowards",
-      "OnCollisionEnter2D",
-      "Collision2D",
-      "CompareTag",
-      "Ball",
-      "BallController",
-      "GetComponent",
-      "DecreaseByBlockHit",
-      "Destroy"
-    ],
-    "component_access_types": [
-      "BallController"
-    ],
-    "created_types": [
-      "WaitForSeconds"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "Move",
-      "Repeat",
-      "Section Loop",
-      "�ǵ��ư� Ŀ�ǵ� ��ȣ",
-      "���� �ݺ� Ƚ��",
-      "Y Limit",
-      "Blocked",
-      "Ball"
-    ],
-    "numeric_literals": [
-      6,
-      20,
-      0.01
-    ],
-    "guessed_roles": [
-      "combat",
-      "runtime",
-      "player",
-      "manager"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "전투 계열 로직 포함",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "PaddlePrototype/Assets/Scripts/game_manager.cs",
-    "path": "PaddlePrototype/Assets/Scripts/game_manager.cs",
-    "file_name": "game_manager.cs",
-    "content_hash": "ebe0b784f2411961494a95c0183f5aa8fb036f5e",
-    "size": 2420,
-    "line_count": 100,
-    "namespace": "",
-    "using_list": [
-      "System.Collections.Generic",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "GameManager",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "EnemySpawnData",
-        "kind": "class",
-        "access": "public",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "GameManager",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Vector2Int",
-      "Start",
-      "SpawnAllEnemies",
-      "SpawnEnemy",
-      "ClearEnemies"
-    ],
-    "fields": [
-      {
-        "name": "enemyPrefab",
-        "type": "GameObject",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "moveInterval",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "moveSpeed",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "loopAllCommands",
-        "type": "bool",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Start"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 4,
-    "get_component_count": 1,
-    "find_call_count": 1,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "bool",
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "Serializable",
-      "Spawn",
-      "Vector2Int",
-      "Move",
-      "Commands",
-      "EnemyGridMover",
-      "MoveCommand",
-      "Setting",
-      "Enemy",
-      "BrickManager",
-      "Start",
-      "SpawnAllEnemies",
-      "FindAnyObjectByType",
-      "ClearEnemies",
-      "SpawnEnemy",
-      "Vector3",
-      "GetCellWorldPosition",
-      "Instantiate",
-      "Quaternion",
-      "GetComponent",
-      "AddComponent",
-      "Init",
-      "Add",
-      "Destroy",
-      "Clear",
-      "GetChild"
-    ],
-    "component_access_types": [
-      "EnemyGridMover"
-    ],
-    "created_types": [
-      "Vector2Int"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "Spawn",
-      "Move Commands",
-      "Move Setting",
-      "Enemy"
-    ],
-    "numeric_literals": [
-      1,
-      3
-    ],
-    "guessed_roles": [
-      "runtime",
-      "player",
-      "combat",
-      "manager",
-      "data"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "전투 계열 로직 포함",
-      "컴포넌트 조회 사용",
-      "Find 계열 탐색 사용"
     ]
   },
   {
