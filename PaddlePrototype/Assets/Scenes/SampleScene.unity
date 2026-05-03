@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &226265232
+--- !u!1 &157079536
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,25 +127,92 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 226265235}
-  - component: {fileID: 226265234}
-  - component: {fileID: 226265233}
-  - component: {fileID: 226265236}
-  - component: {fileID: 226265237}
-  m_Layer: 0
-  m_Name: paddle_up
+  - component: {fileID: 157079541}
+  - component: {fileID: 157079540}
+  - component: {fileID: 157079539}
+  - component: {fileID: 157079538}
+  - component: {fileID: 157079537}
+  m_Layer: 6
+  m_Name: roof_paddle
   m_TagString: top_paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &226265233
+--- !u!68 &157079537
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157079536}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.1801887, y: -0.1732968}
+  - {x: -1.5480313, y: 0.4237418}
+  - {x: -1.1882526, y: 0.71227205}
+  - {x: -0.8543457, y: 0.88873047}
+  - {x: -0.4802768, y: 0.976645}
+  - {x: -0.0000029288713, y: 0.99950004}
+  - {x: 0.48818147, y: 0.9664945}
+  - {x: 0.8780928, y: 0.862726}
+  - {x: 1.2238879, y: 0.6754843}
+  - {x: 1.7098947, y: 0.27396324}
+  - {x: 2.1804464, y: -0.17302825}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &157079538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226265232}
+  m_GameObject: {fileID: 157079536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705ba1ecde105c1408ca7f5cf1c476f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::paddle_movement_upper
+  moveSpeed: 15
+  paddleWidth: 0.7
+  activeCollisionEnabled: 1
+--- !u!114 &157079539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157079536}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
@@ -212,14 +279,14 @@ MonoBehaviour:
   - {x: 1.7098947, y: 0.27396324}
   - {x: 2.1804464, y: -0.17302825}
   m_ShadowSegment: []
---- !u!1971053207 &226265234
+--- !u!1971053207 &157079540
 SpriteShapeRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226265232}
+  m_GameObject: {fileID: 157079536}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -278,88 +345,21 @@ SpriteShapeRenderer:
     m_Center: {x: 0.000027179718, y: 0.44843966, z: 0}
     m_Extent: {x: 2.3538692, y: 0.80155605, z: 0}
   m_SpriteSortPoint: 0
---- !u!4 &226265235
+--- !u!4 &157079541
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226265232}
+  m_GameObject: {fileID: 157079536}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.5, z: 0}
+  m_LocalPosition: {x: 0, y: -3.454, z: 0}
   m_LocalScale: {x: 0.7, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &226265236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226265232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 705ba1ecde105c1408ca7f5cf1c476f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::paddle_movement_upper
-  moveSpeed: 15
-  paddleWidth: 0.7
-  activeCollisionEnabled: 1
---- !u!68 &226265237
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226265232}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -2.1801887, y: -0.1732968}
-  - {x: -1.5480313, y: 0.4237418}
-  - {x: -1.1882526, y: 0.71227205}
-  - {x: -0.8543457, y: 0.88873047}
-  - {x: -0.4802768, y: 0.976645}
-  - {x: -0.0000029288713, y: 0.99950004}
-  - {x: 0.48818147, y: 0.9664945}
-  - {x: 0.8780928, y: 0.862726}
-  - {x: 1.2238879, y: 0.6754843}
-  - {x: 1.7098947, y: 0.27396324}
-  - {x: 2.1804464, y: -0.17302825}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &421692849
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 421692852}
   - component: {fileID: 421692851}
   - component: {fileID: 421692853}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 20, z: 1}
+  m_LocalScale: {x: 1, y: 19, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -462,7 +462,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 4cd3258e077ed5242973e21aaa9f7785, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 729019794}
   - component: {fileID: 729019797}
   - component: {fileID: 729019798}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -940,7 +940,7 @@ PolygonCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 4cd3258e077ed5242973e21aaa9f7785, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1111,7 +1111,6 @@ GameObject:
   - component: {fileID: 931126044}
   - component: {fileID: 931126043}
   - component: {fileID: 931126042}
-  - component: {fileID: 931126041}
   - component: {fileID: 931126045}
   m_Layer: 0
   m_Name: ball
@@ -1120,42 +1119,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!58 &931126041
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931126040}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
 --- !u!50 &931126042
 Rigidbody2D:
   serializedVersion: 5
@@ -1164,9 +1127,9 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931126040}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
@@ -1269,7 +1232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea584d29d6b03948868d3ecc368c58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallController
-  baseSpeed: 10
+  baseSpeed: 15
   maxSpeed: 30
   basePower: 10
   paddleSpeedIncrease: 5
@@ -1279,6 +1242,9 @@ MonoBehaviour:
   centerPullStrength: 1.5
   centerZone: 0.7
   ballRadius: 0.7
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &938864627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,7 +1349,7 @@ GameObject:
   - component: {fileID: 1061203048}
   - component: {fileID: 1061203051}
   - component: {fileID: 1061203052}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: paddle_down
   m_TagString: down_paddle
   m_Icon: {fileID: 0}
@@ -1623,66 +1589,14 @@ GameObject:
   - component: {fileID: 1242489114}
   - component: {fileID: 1242489113}
   - component: {fileID: 1242489112}
-  - component: {fileID: 1242489111}
-  m_Layer: 0
-  m_Name: roof_paddle
+  - component: {fileID: 1242489116}
+  m_Layer: 6
+  m_Name: paddle_up
   m_TagString: top_paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!68 &1242489111
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242489110}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 4cd3258e077ed5242973e21aaa9f7785, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -2.1801887, y: -0.1732968}
-  - {x: -1.5480313, y: 0.4237418}
-  - {x: -1.1882526, y: 0.71227205}
-  - {x: -0.8543457, y: 0.88873047}
-  - {x: -0.4802768, y: 0.976645}
-  - {x: -0.0000029288713, y: 0.99950004}
-  - {x: 0.48818147, y: 0.9664945}
-  - {x: 0.8780928, y: 0.862726}
-  - {x: 1.2238879, y: 0.6754843}
-  - {x: 1.7098947, y: 0.27396324}
-  - {x: 2.1804464, y: -0.17302825}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!114 &1242489112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1846,12 +1760,64 @@ Transform:
   m_GameObject: {fileID: 1242489110}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.454, z: 0}
+  m_LocalPosition: {x: 0, y: -3.5, z: 0}
   m_LocalScale: {x: 0.7, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1242489116
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242489110}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.1801887, y: -0.1732968}
+  - {x: -1.5480313, y: 0.4237418}
+  - {x: -1.1882526, y: 0.71227205}
+  - {x: -0.8543457, y: 0.88873047}
+  - {x: -0.4802768, y: 0.976645}
+  - {x: -0.0000029288713, y: 0.99950004}
+  - {x: 0.48818147, y: 0.9664945}
+  - {x: 0.8780928, y: 0.862726}
+  - {x: 1.2238879, y: 0.6754843}
+  - {x: 1.7098947, y: 0.27396324}
+  - {x: 2.1804464, y: -0.17302825}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1679818622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,7 +1829,7 @@ GameObject:
   - component: {fileID: 1679818625}
   - component: {fileID: 1679818624}
   - component: {fileID: 1679818626}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1939,7 +1905,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 20, z: 1}
+  m_LocalScale: {x: 1, y: 19, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1954,7 +1920,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 4cd3258e077ed5242973e21aaa9f7785, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2001,7 +1967,7 @@ GameObject:
   - component: {fileID: 1771637051}
   - component: {fileID: 1771637050}
   - component: {fileID: 1771637052}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall_up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2077,7 +2043,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 10, z: 0}
-  m_LocalScale: {x: 12, y: 1, z: 1}
+  m_LocalScale: {x: 11, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2092,7 +2058,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 4cd3258e077ed5242973e21aaa9f7785, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2136,8 +2102,8 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 938864629}
   - {fileID: 931126044}
-  - {fileID: 226265235}
   - {fileID: 1242489115}
+  - {fileID: 157079541}
   - {fileID: 1061203050}
   - {fileID: 729019796}
   - {fileID: 421692852}
