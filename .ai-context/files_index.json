@@ -798,9 +798,9 @@
     "file_id": "PaddlePrototype/Assets/Scripts/enemy_projectile.cs",
     "path": "PaddlePrototype/Assets/Scripts/enemy_projectile.cs",
     "file_name": "enemy_projectile.cs",
-    "content_hash": "a5daa97a7667eadde42f2fe7bbe52fd789af0333",
-    "size": 834,
-    "line_count": 39,
+    "content_hash": "934c98d825a55dde2eb32476336fa1040b6b7c85",
+    "size": 990,
+    "line_count": 44,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -822,8 +822,10 @@
     "main_class_name": "EnemyProjectile",
     "unity_type": "MonoBehaviour",
     "methods": [
+      "Vector2",
       "Awake",
       "Start",
+      "Vector3",
       "OnTriggerEnter2D"
     ],
     "fields": [
@@ -852,17 +854,19 @@
     "public_field_count": 0,
     "get_component_count": 1,
     "find_call_count": 0,
-    "new_keyword_count": 0,
+    "new_keyword_count": 2,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
       "Rigidbody2D",
       "UnityEngine",
+      "Size",
+      "Vector2",
       "Awake",
       "GetComponent",
       "Start",
-      "Vector2",
+      "Vector3",
       "Destroy",
       "OnTriggerEnter2D",
       "Collider2D",
@@ -873,12 +877,19 @@
     "component_access_types": [
       "Rigidbody2D"
     ],
-    "created_types": [],
+    "created_types": [
+      "Vector2",
+      "Vector3"
+    ],
     "singleton_access_types": [],
-    "string_literals": [],
+    "string_literals": [
+      "Size"
+    ],
     "numeric_literals": [
       5,
       0.5,
+      0.3,
+      1,
       0
     ],
     "guessed_roles": [
@@ -1231,14 +1242,15 @@
     "file_id": "PaddlePrototype/Assets/Scripts/game_manager.cs",
     "path": "PaddlePrototype/Assets/Scripts/game_manager.cs",
     "file_name": "game_manager.cs",
-    "content_hash": "3c0a7c981cf7050caa1be7bcd81ac957db50f7e5",
-    "size": 3130,
-    "line_count": 127,
+    "content_hash": "d7e743cb9736b3719b9fa92e084def61b2aee275",
+    "size": 3604,
+    "line_count": 147,
     "namespace": "",
     "using_list": [
       "System.Collections",
       "System.Collections.Generic",
-      "UnityEngine"
+      "UnityEngine",
+      "UnityEngine.SceneManagement"
     ],
     "classes": [
       {
@@ -1272,7 +1284,9 @@
       "SpawnAllEnemies",
       "SpawnEnemy",
       "ClearEnemies",
-      "RespawnEnemiesIfNoBrick"
+      "RespawnEnemiesIfNoBrick",
+      "RestartGame",
+      "RestartRoutine"
     ],
     "fields": [
       {
@@ -1304,6 +1318,13 @@
         "is_static": false
       },
       {
+        "name": "isRestarting",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
         "name": "cell",
         "type": "Vector2Int",
         "access": "internal",
@@ -1328,7 +1349,7 @@
     "get_component_count": 1,
     "find_call_count": 2,
     "new_keyword_count": 1,
-    "coroutine_count": 1,
+    "coroutine_count": 3,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
@@ -1339,6 +1360,7 @@
       "Collections",
       "Generic",
       "UnityEngine",
+      "SceneManagement",
       "Serializable",
       "Spawn",
       "Move",
@@ -1366,7 +1388,14 @@
       "Clear",
       "GetChild",
       "RespawnEnemiesIfNoBrick",
-      "IsCellOccupied"
+      "IsCellOccupied",
+      "RestartGame",
+      "StartCoroutine",
+      "RestartRoutine",
+      "UI",
+      "SceneManager",
+      "LoadScene",
+      "GetActiveScene"
     ],
     "component_access_types": [
       "Enemy"
@@ -1387,15 +1416,16 @@
       3
     ],
     "guessed_roles": [
+      "scene",
+      "save-load",
       "runtime",
-      "player",
-      "combat",
-      "manager",
-      "data"
+      "ui",
+      "player"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
-      "전투 계열 로직 포함",
+      "UI 관련 로직 포함",
+      "저장/불러오기 관련 로직 포함",
       "컴포넌트 조회 사용",
       "Find 계열 탐색 사용"
     ]
