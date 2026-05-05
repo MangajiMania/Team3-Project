@@ -20,10 +20,18 @@ public class BallController : MonoBehaviour
 
     [SerializeField] private float ballRadius = 0.7f;
 
+    [SerializeField] private float skinWidth = 0.1f; // 벽과 거리 유지 정도
+
+    [SerializeField] private float _outsideMaxBounceAngle = 50f;
+    [SerializeField] private float _insideMaxBounceAngle = 50f;
+
+    private float actualRadius;
+
     public LayerMask collisionMask; // 벽과 패들 레이어를 선택하세요
 
     private Transform tr;
     private Vector2 direction;
+    private CircleCollider2D cc;
     private bool isGameStarted = false;
 
     void Start()
@@ -35,11 +43,15 @@ public class BallController : MonoBehaviour
         power = basePower;
         tr = GetComponent<Transform>();
         tr.localScale = new Vector3(ballRadius,ballRadius,ballRadius);
+        cc = GetComponent<CircleCollider2D>();
+        actualRadius = cc.radius * ballRadius*1.5f;
+        
     }
 
     void Update()
     {
         MoveBall(speed * Time.deltaTime);
+        
         if (speed < baseSpeed)
         {
             speed = baseSpeed;
@@ -54,7 +66,7 @@ public class BallController : MonoBehaviour
     void MoveBall(float distance)
     {
         // 1. CircleCast로 이동 경로에 장애물이 있는지 확인
-        RaycastHit2D hit = Physics2D.CircleCast(transform.position, ballRadius, direction, distance, collisionMask);
+        RaycastHit2D hit = Physics2D.CircleCast(transform.position, actualRadius, direction, distance, collisionMask);
 
         if (hit.collider != null)
         {
@@ -77,6 +89,7 @@ public class BallController : MonoBehaviour
             // 충돌이 없다면 지정된 거리만큼 직선 이동
             transform.Translate(direction * distance, Space.World);
         }
+        ResolveOverlap();
     }
 
     void UpdateDirection(RaycastHit2D hit)
@@ -84,21 +97,34 @@ public class BallController : MonoBehaviour
         GameObject obj = hit.collider.gameObject;
 
         // 패들 충돌 로직
-        if (obj.name.Contains("paddle_up") || obj.name.Contains("paddle_down"))
+        if (obj.name.Contains("paddle_up") || obj.name.Contains("paddle_down") || obj.name.Contains("roof_paddle"))
         {
-            float xOffset = transform.position.x - obj.transform.position.x;
-            float yDir = (transform.position.y > obj.transform.position.y) ? 1f : -1f;
+            // 1. 비율 계산 (이미 3으로 잘 나온다면 이 값은 -1 ~ 1 사이가 될 것임)
+            float xOffset = (transform.position.x - obj.transform.position.x) / (3f / 2f);
+            xOffset = Mathf.Clamp(xOffset, -1f, 1f);
+        
+            // 2. 튕겨나갈 기본 방향 결정 (위패들은 아래로, 아래패들은 위로)
+            Vector2 baseDir = obj.name.Contains("paddle_down") || obj.name.Contains("roof_paddle") ? Vector2.up : Vector2.down;
 
-            float returnX = 0f;
-            if (Mathf.Abs(xOffset) >= centerZone)
+            // 3. 각도 보정 (Lerp)
+            float targetAngle;
+            if (obj.name.Contains("paddle_up") || obj.name.Contains("paddle_down"))
             {
-                returnX = -xOffset * centerPullStrength;
+                targetAngle = Mathf.Lerp(0, _insideMaxBounceAngle, Mathf.Abs(xOffset));
             }
+            else
+            {
+                targetAngle = Mathf.Lerp(0, _outsideMaxBounceAngle, Mathf.Abs(xOffset));
+            }
+            
+            Quaternion rotation = Quaternion.Euler(0, 0, -xOffset * targetAngle);
 
-            direction = new Vector2(returnX, yDir).normalized;
+            direction = (rotation * baseDir).normalized;
+
+            // 5. 가속 로직 (아래쪽 패들에 닿았을 때만 가속하고 싶다면 조건 유지)
             if (obj.name.Contains("paddle_down"))
             {
-                speed += 5f;
+                speed += 5; 
             }
         }
         else
@@ -108,11 +134,30 @@ public class BallController : MonoBehaviour
         }
     }
 
+    void ResolveOverlap()
+    {
+        Collider2D overlap = Physics2D.OverlapCircle(tr.position, actualRadius, collisionMask);
+
+        if (overlap != null)
+        {
+            Vector2 closest = overlap.ClosestPoint(tr.position);
+            Vector2 pushDir = (tr.position - (Vector3)closest);
+
+            if (pushDir.sqrMagnitude < 0.0001f)
+            {
+                // 완전히 겹쳤을 때 (중심이 동일)
+                pushDir = Random.insideUnitCircle.normalized;
+            }
+
+            tr.position += (Vector3)(pushDir.normalized * (skinWidth * 2f));
+        }
+    }
+
     // 에디터 씬 뷰에서 공의 충돌 범위를 확인하기 위한 기즈모
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, ballRadius);
+        Gizmos.DrawWireSphere(transform.position, actualRadius);
     }
 
     //void LaunchBall()
