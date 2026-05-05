@@ -17,6 +17,9 @@ public class UpperPadController : MonoBehaviour
     private Transform tr;
     private bool isCollisionOn = true;
 
+    //디버프
+    private PaddleDebuff paddleDebuff;
+
     void Start()
     {
         mainCamera = Camera.main;
@@ -25,10 +28,17 @@ public class UpperPadController : MonoBehaviour
         paddleCollider = GetComponent<Collider2D>();
         tr = GetComponent<Transform>();
         tr.localScale = new Vector3(paddleWidth,0.5f,1f);
+
+        //디버프
+        paddleDebuff = GetComponentInParent<PaddleDebuff>();
     }
 
     void Update()
     {
+        //디버프 적용
+        if (paddleDebuff != null && paddleDebuff.IsStunned)
+            return;
+
         // 2. Mouse.current를 사용하여 클릭 체크
         if (activeCollisionEnabled == 1) 
         {

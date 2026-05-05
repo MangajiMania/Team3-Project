@@ -7,6 +7,7 @@ TagManager:
   - paddle
   - top_paddle
   - down_paddle
+  - Ball
   layers:
   - Default
   - TransparentFX

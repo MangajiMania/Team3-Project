@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public class GameManager : MonoBehaviour
         public Vector2Int startCell = new Vector2Int(0, 0);
 
         [Header("Move Commands")]
-        public List<EnemyGridMover.MoveCommand> moveCommands = new();
+        public List<Enemy.MoveCommand> moveCommands = new();
 
         [Header("Move Setting")]
         public float moveInterval = 1.0f;
@@ -25,11 +26,23 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform enemyParent;
     [SerializeField] private List<EnemySpawnData> enemies = new();
 
-    private readonly List<EnemyGridMover> spawnedEnemies = new();
+    [Header("Enemy Spawn Option")]
+    [SerializeField] private bool spawnEnemiesOnStart = true;
 
-    private void Start()
+    private readonly List<Enemy> spawnedEnemies = new();
+
+    private IEnumerator Start()
     {
-        SpawnAllEnemies();
+        if (brickManager == null)
+            brickManager = FindAnyObjectByType<BrickManager>();
+
+        while (brickManager == null || !brickManager.IsInitialized)
+            yield return null;
+
+        if (spawnEnemiesOnStart)
+        {
+            SpawnAllEnemies();
+        }
     }
 
     public void SpawnAllEnemies()
@@ -62,10 +75,10 @@ public class GameManager : MonoBehaviour
             enemyParent
         );
 
-        EnemyGridMover mover = enemyObj.GetComponent<EnemyGridMover>();
+        Enemy mover = enemyObj.GetComponent<Enemy>();
 
         if (mover == null)
-            mover = enemyObj.AddComponent<EnemyGridMover>();
+            mover = enemyObj.AddComponent<Enemy>();
 
         mover.Init(
            brickManager,
@@ -81,7 +94,7 @@ public class GameManager : MonoBehaviour
 
     public void ClearEnemies()
     {
-        foreach (EnemyGridMover enemy in spawnedEnemies)
+        foreach (Enemy enemy in spawnedEnemies)
         {
             if (enemy != null)
                 Destroy(enemy.gameObject);
@@ -94,6 +107,20 @@ public class GameManager : MonoBehaviour
             for (int i = enemyParent.childCount - 1; i >= 0; i--)
             {
                 Destroy(enemyParent.GetChild(i).gameObject);
+            }
+        }
+    }
+
+    public void RespawnEnemiesIfNoBrick()
+    {
+        foreach (EnemySpawnData enemyData in enemies)
+        {
+            Vector2Int cell = enemyData.startCell;
+
+            // 해당 위치에 벽돌이 없으면
+            if (!brickManager.IsCellOccupied(cell))
+            {
+                SpawnEnemy(enemyData);
             }
         }
     }

@@ -2,8 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGridMover : MonoBehaviour
+public class Enemy : MonoBehaviour, IBallHitReceiver
 {
+    [Header("HP")]
+    [SerializeField] private int maxHp = 3;
+    private int currentHp;
+
+    [Header("Projectile")]
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private float fireInterval = 2f;
+
+    private float fireTimer;
+
+    private void Awake()
+    {
+        currentHp = maxHp;
+    }
+
+    private void Update()
+    {
+        fireTimer += Time.deltaTime;
+
+        if (fireTimer >= fireInterval)
+        {
+            fireTimer = 0f;
+            Fire();
+        }
+    }
+
+    private void Fire()
+    {
+        if (projectilePrefab == null)
+            return;
+
+        Vector3 spawnPos = firePoint != null
+            ? firePoint.position
+            : transform.position;
+
+        Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
+    }
+    public void OnBallHit()
+    {
+        currentHp--;
+
+        Debug.Log($"Enemy Hit: {currentHp}/{maxHp}");
+
+        if (currentHp <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public enum BlockedMoveAction
     {
         Wait,
@@ -244,7 +294,8 @@ public class EnemyGridMover : MonoBehaviour
         isMoving = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    //unity 물리 사용 시 (circlecast 방식엔 필요 x)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!collision.gameObject.CompareTag("Ball"))
             return;
@@ -255,5 +306,5 @@ public class EnemyGridMover : MonoBehaviour
             //ball.DecreaseByBlockHit();
 
         Destroy(gameObject);
-    }
+    }*/
 }

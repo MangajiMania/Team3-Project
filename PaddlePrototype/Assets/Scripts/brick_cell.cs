@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BrickCell : MonoBehaviour
+public class BrickCell : MonoBehaviour, IBallHitReceiver
 {
     private BrickManager manager;
     private Vector2Int cell;
@@ -20,16 +20,8 @@ public class BrickCell : MonoBehaviour
         this.version = version;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnBallHit()
     {
-        if (!collision.gameObject.CompareTag("Ball"))
-            return;
-
-        BallController ball = collision.gameObject.GetComponent<BallController>();
-
-        if (ball != null)
-           // ball.DecreaseByBlockHit();
-
         if (isFixed)
             return;
 
@@ -41,4 +33,26 @@ public class BrickCell : MonoBehaviour
         if (manager != null)
             manager.NotifyBrickDestroyed(cell, isFixed, version);
     }
+
+    public bool IsFixedBrick()
+    {
+        return isFixed;
+    }
+
+    //unity 물리 사용 시 (circlecast 방식엔 필요 x)
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Ball"))
+            return;
+
+        BallController ball = collision.gameObject.GetComponent<BallController>();
+
+        if (ball != null)
+           //ball.DecreaseByBlockHit();
+
+        if (isFixed)
+            return;
+
+        Destroy(gameObject);
+    }*/
 }

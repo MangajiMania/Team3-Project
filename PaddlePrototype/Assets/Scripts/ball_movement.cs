@@ -96,6 +96,14 @@ public class BallController : MonoBehaviour
     {
         GameObject obj = hit.collider.gameObject;
 
+        //패들 외 물체와 충돌 시 작용 인터페이스(i ball hit receiver)로 위임 
+        var hitObj = hit.collider.GetComponentInParent<IBallHitReceiver>();
+
+        if (hitObj != null)
+        {
+            hitObj.OnBallHit();
+        }
+
         // 패들 충돌 로직
         if (obj.name.Contains("paddle_up") || obj.name.Contains("paddle_down") || obj.name.Contains("roof_paddle"))
         {
@@ -138,19 +146,32 @@ public class BallController : MonoBehaviour
     {
         Collider2D overlap = Physics2D.OverlapCircle(tr.position, actualRadius, collisionMask);
 
-        if (overlap != null)
+        if (overlap == null)
+            return;
+
+        BrickCell brick = overlap.GetComponentInParent<BrickCell>();
+
+        //일반 벽돌만 겹침 보정 제외
+        //고정 벽돌은 보정해야 끼임 방지됨
+        if (brick != null && !brick.IsFixedBrick())
+            return;
+
+        //적은 겹침 보정 제외
+        Enemy enemy = overlap.GetComponentInParent<Enemy>();
+        if (enemy != null)
+            return;
+
+        Vector2 closest = overlap.ClosestPoint(tr.position);
+        Vector2 pushDir = (tr.position - (Vector3)closest);
+
+        if (pushDir.sqrMagnitude < 0.0001f)
         {
-            Vector2 closest = overlap.ClosestPoint(tr.position);
-            Vector2 pushDir = (tr.position - (Vector3)closest);
-
-            if (pushDir.sqrMagnitude < 0.0001f)
-            {
-                // 완전히 겹쳤을 때 (중심이 동일)
-                pushDir = Random.insideUnitCircle.normalized;
-            }
-
-            tr.position += (Vector3)(pushDir.normalized * (skinWidth * 2f));
+            // 완전히 겹쳤을 때 (중심이 동일)
+            pushDir = Random.insideUnitCircle.normalized;
         }
+
+        tr.position += (Vector3)(pushDir.normalized * (skinWidth));
+        
     }
 
     // 에디터 씬 뷰에서 공의 충돌 범위를 확인하기 위한 기즈모
@@ -159,6 +180,8 @@ public class BallController : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, actualRadius);
     }
+
+
 
     //void LaunchBall()
     //{

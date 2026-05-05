@@ -108,13 +108,17 @@ public class BrickManager : MonoBehaviour
     private Coroutine growRoutine;
     private bool clearing;
 
-    private void Start()
+    public bool IsInitialized { get; private set; }
+
+    private void Awake()
     {
         ResetBricks();
     }
 
     public void ResetBricks()
     {
+        IsInitialized = false;
+
         currentVersion++;
 
         StopGrowing();
@@ -124,10 +128,11 @@ public class BrickManager : MonoBehaviour
         fixedOccupied = new bool[columnCount, rowCount];
 
         SpawnFixedBricks();
-
         SpawnStartBricks();
 
         growRoutine = StartCoroutine(GrowRoutine());
+
+        IsInitialized = true;
     }
 
     private IEnumerator GrowRoutine()
