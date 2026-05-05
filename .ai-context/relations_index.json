@@ -2,6 +2,13 @@
   {
     "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "from_class": "BallController",
+    "to_type": "CircleCollider2D",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
     "to_type": "Transform",
     "relation_type": "component-access",
     "strength": 3
@@ -51,6 +58,34 @@
   {
     "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "from_class": "BallController",
+    "to_type": "CircleCollider2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
+    "to_type": "Clamp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
+    "to_type": "ClosestPoint",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
+    "to_type": "Collider2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
     "to_type": "Collision2D",
     "relation_type": "uses",
     "strength": 1
@@ -80,6 +115,13 @@
     "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "from_class": "BallController",
     "to_type": "DrawWireSphere",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
+    "to_type": "Euler",
     "relation_type": "uses",
     "strength": 1
   },
@@ -135,6 +177,13 @@
   {
     "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "from_class": "BallController",
+    "to_type": "Lerp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
     "to_type": "MoveBall",
     "relation_type": "uses",
     "strength": 1
@@ -156,7 +205,21 @@
   {
     "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "from_class": "BallController",
+    "to_type": "OverlapCircle",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
     "to_type": "Physics2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
+    "to_type": "Quaternion",
     "relation_type": "uses",
     "strength": 1
   },
@@ -171,6 +234,13 @@
     "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "from_class": "BallController",
     "to_type": "Reflect",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
+    "to_type": "ResolveOverlap",
     "relation_type": "uses",
     "strength": 1
   },

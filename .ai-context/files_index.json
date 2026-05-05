@@ -3,9 +3,9 @@
     "file_id": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "path": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "file_name": "ball_movement.cs",
-    "content_hash": "eb7000d7b1ffd2ae4e9a3613733154249134d99f",
-    "size": 5642,
-    "line_count": 167,
+    "content_hash": "a5d26838da1fab2fb0323a4377b4e0fc62e799df",
+    "size": 7457,
+    "line_count": 212,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -33,6 +33,7 @@
       "Update",
       "MoveBall",
       "UpdateDirection",
+      "ResolveOverlap",
       "OnDrawGizmos",
       "LaunchBall",
       "OnCollisionStay2D",
@@ -41,6 +42,13 @@
     "fields": [
       {
         "name": "power",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "actualRadius",
         "type": "float",
         "access": "private",
         "serialized": false,
@@ -56,6 +64,13 @@
       {
         "name": "direction",
         "type": "Vector2",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "cc",
+        "type": "CircleCollider2D",
         "access": "private",
         "serialized": false,
         "is_static": false
@@ -89,14 +104,7 @@
         "is_static": false
       },
       {
-        "name": "xOffset",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "returnX",
+        "name": "targetAngle",
         "type": "float",
         "access": "internal",
         "serialized": false,
@@ -119,15 +127,16 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 1,
+    "get_component_count": 2,
     "find_call_count": 0,
-    "new_keyword_count": 5,
+    "new_keyword_count": 4,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
       "float",
       "Vector2",
+      "CircleCollider2D",
       "bool",
       "UnityEngine",
       "LayerMask",
@@ -144,9 +153,17 @@
       "Space",
       "World",
       "UpdateDirection",
+      "ResolveOverlap",
       "Contains",
+      "Clamp",
+      "Lerp",
       "Abs",
+      "Quaternion",
+      "Euler",
       "Reflect",
+      "Collider2D",
+      "OverlapCircle",
+      "ClosestPoint",
       "OnDrawGizmos",
       "Gizmos",
       "Color",
@@ -158,7 +175,8 @@
       "FixedUpdate"
     ],
     "component_access_types": [
-      "Transform"
+      "Transform",
+      "CircleCollider2D"
     ],
     "created_types": [
       "Vector2",
@@ -167,7 +185,8 @@
     "singleton_access_types": [],
     "string_literals": [
       "paddle_up",
-      "paddle_down"
+      "paddle_down",
+      "roof_paddle"
     ],
     "numeric_literals": [
       10,
@@ -176,16 +195,20 @@
       1,
       0.2,
       0.7,
+      0.1,
+      50,
       0.5,
       1,
+      1.5,
       0.025,
       2,
       3,
       4,
-      0,
+      3,
+      2,
       5,
-      10,
-      0.1
+      0.0001,
+      10
     ],
     "guessed_roles": [
       "runtime",

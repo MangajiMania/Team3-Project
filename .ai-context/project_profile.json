@@ -35,16 +35,16 @@
       "referenced_type_count": 49
     },
     {
+      "class_name": "BallController",
+      "file_id": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+      "relation_count": 44,
+      "referenced_type_count": 39
+    },
+    {
       "class_name": "GameManager",
       "file_id": "PaddlePrototype/Assets/Scripts/game_manager.cs",
       "relation_count": 35,
       "referenced_type_count": 32
-    },
-    {
-      "class_name": "BallController",
-      "file_id": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
-      "relation_count": 34,
-      "referenced_type_count": 30
     },
     {
       "class_name": "UpperPadController",
