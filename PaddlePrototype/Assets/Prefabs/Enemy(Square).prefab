@@ -182,4 +182,4 @@ MonoBehaviour:
   maxHp: 3
   projectilePrefab: {fileID: 3078838706557544441, guid: 89aa70b81c92d874fa0b9f32cee648f6, type: 3}
   firePoint: {fileID: 0}
-  fireInterval: 2
+  fireInterval: 1

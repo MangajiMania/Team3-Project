@@ -173,3 +173,4 @@ MonoBehaviour:
   moveSpeed: 5
   lifeTime: 5
   stunDuration: 0.5
+  size: {x: 0.3, y: 0.3}

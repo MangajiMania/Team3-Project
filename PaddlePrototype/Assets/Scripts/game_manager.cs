@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool spawnEnemiesOnStart = true;
 
     private readonly List<Enemy> spawnedEnemies = new();
+
+    private bool isRestarting = false;
 
     private IEnumerator Start()
     {
@@ -123,5 +126,22 @@ public class GameManager : MonoBehaviour
                 SpawnEnemy(enemyData);
             }
         }
+    }
+
+    public void RestartGame()
+    {
+        if (isRestarting)
+            return;
+
+        isRestarting = true;
+        StartCoroutine(RestartRoutine());
+    }
+
+    private IEnumerator RestartRoutine()
+    {
+        // 현재 프레임 UI/이벤트 끝까지 기다림
+        yield return null;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

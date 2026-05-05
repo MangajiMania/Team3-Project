@@ -7,6 +7,9 @@ public class EnemyProjectile : MonoBehaviour
 
     [SerializeField] private float stunDuration = 0.5f;
 
+    [Header("Size")]
+    [SerializeField] private Vector2 size = new Vector2(0.3f, 0.3f);
+
     private Rigidbody2D rb;
 
     private void Awake()
@@ -16,6 +19,8 @@ public class EnemyProjectile : MonoBehaviour
 
     private void Start()
     {
+        transform.localScale = new Vector3(size.x, size.y, 1f);
+
         if (rb != null)
         {
             rb.gravityScale = 0f;
