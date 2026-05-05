@@ -1914,6 +1914,214 @@
     ]
   },
   {
+    "file_id": "PaddlePrototype/Assets/Scripts/PaddleSkillHandler.cs",
+    "path": "PaddlePrototype/Assets/Scripts/PaddleSkillHandler.cs",
+    "file_name": "PaddleSkillHandler.cs",
+    "content_hash": "185fb342de197e8299d2d6fa15517cc4d2fc075b",
+    "size": 4402,
+    "line_count": 145,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "System.Collections",
+      "System.Collections.Generic"
+    ],
+    "classes": [
+      {
+        "name": "PaddleSkillHandler",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "PaddleSkillHandler",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "Update",
+      "OnBallHitPaddle",
+      "HandleDribbleTimer",
+      "StartCharging",
+      "HandleChargingInput",
+      "ReleaseSequence",
+      "ExecuteSkill",
+      "Vector2"
+    ],
+    "fields": [
+      {
+        "name": "chargeLevel",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "isCharging",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "chargeHoldTimer",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "dribbleCount",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "dribbleWindowTimer",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "DRIBBLE_TIME_LIMIT",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "paddleCollider",
+        "type": "Collider2D",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "damage",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 2,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "int",
+      "bool",
+      "float",
+      "Collider2D",
+      "UnityEngine",
+      "System",
+      "Collections",
+      "Generic",
+      "References",
+      "BallController",
+      "BrickManager",
+      "LayerMask",
+      "Gauge",
+      "Charge",
+      "Dribble",
+      "Logic",
+      "DRIBBLE_TIME_LIMIT",
+      "Awake",
+      "GetComponent",
+      "Update",
+      "HandleDribbleTimer",
+      "HandleChargingInput",
+      "OnBallHitPaddle",
+      "StartCharging",
+      "Log",
+      "Input",
+      "GetKey",
+      "KeyCode",
+      "Space",
+      "GetKeyUp",
+      "StartCoroutine",
+      "ReleaseSequence",
+      "ExecuteSkill",
+      "Vector2",
+      "Physics2D",
+      "OverlapBoxAll",
+      "GetComponentInParent",
+      "IBallHitReceiver",
+      "OnBallHit",
+      "Enemy",
+      "TakeDamage",
+      "ExecutePowerShot"
+    ],
+    "component_access_types": [
+      "Collider2D"
+    ],
+    "created_types": [
+      "Vector2"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "References",
+      "Gauge & Charge",
+      "Dribble Logic",
+      "차징 시작: 1단계",
+      "차징 단계 상승: {chargeLevel}단계",
+      "패들 비활성화 - 공 방출 대기",
+      "{chargeLevel}단계 레이저 발사!"
+    ],
+    "numeric_literals": [
+      3,
+      3,
+      0,
+      2,
+      1,
+      2,
+      0.5,
+      4,
+      1.5,
+      30,
+      20,
+      10
+    ],
+    "guessed_roles": [
+      "runtime",
+      "combat",
+      "player",
+      "manager",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
     "file_id": "PaddlePrototype/Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs",
     "path": "PaddlePrototype/Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs",
     "file_name": "Benchmark01_UGUI.cs",
