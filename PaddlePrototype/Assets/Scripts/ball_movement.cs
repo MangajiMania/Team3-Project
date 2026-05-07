@@ -33,7 +33,7 @@ public class BallController : MonoBehaviour
     private Vector2 direction;
     private CircleCollider2D cc;
     private bool isGameStarted = false;
-    [SerializeField] private ChargingRazerManager razerManager;
+    [SerializeField] private ChargingLaserManager razerManager;
 
     void Start()
     {

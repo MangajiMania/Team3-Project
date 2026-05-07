@@ -6,11 +6,10 @@ public class GaugeManager : MonoBehaviour
 {
     
     
-    [SerializeField] private ChargingRazerManager charging;
 
     [Header("Gauge")]
     public int filledGaugeSegments = 0;
-    private int currentGaugeValue = 0;
+    private int currentGaugeValue=30;
     private int gaugePerSegment = 10;
     [SerializeField] private int maxGaugeSegments = 3;
 
@@ -29,19 +28,14 @@ public class GaugeManager : MonoBehaviour
     public void AddGauge()
     {
         
-        if (currentGaugeValue >= filledGaugeSegments * gaugePerSegment)
-        {
-            currentGaugeValue = maxGaugeSegments * gaugePerSegment;
-        }
-        else
-        {
+        // 최대면 추가 X 
+        int maxGaugeValue = maxGaugeSegments * gaugePerSegment;
+
+        if (!(currentGaugeValue >= maxGaugeValue))
             currentGaugeValue++;
-        }
         
-        if (currentGaugeValue %gaugePerSegment ==0)
-        {
-            ChangeGaugeLevel(currentGaugeValue /gaugePerSegment);
-        }
+        ChangeGaugeLevel(currentGaugeValue / gaugePerSegment);
+
         UpdateGaugeUI();
     }
     
@@ -51,8 +45,13 @@ public class GaugeManager : MonoBehaviour
 
         if (level <= 0)
         {
-            filledGaugeSegments--;
-        }
+            if(!(filledGaugeSegments<=0) && !(currentGaugeValue<0))
+            {
+                filledGaugeSegments--;
+                currentGaugeValue -= gaugePerSegment;
+            }
+            
+        }   
         else
         {
             filledGaugeSegments = level; 
@@ -83,4 +82,7 @@ public class GaugeManager : MonoBehaviour
             gaugeValueText.text = $"Gauge Value: {currentGaugeValue}";
         }
     }
+
+    
+    
 }

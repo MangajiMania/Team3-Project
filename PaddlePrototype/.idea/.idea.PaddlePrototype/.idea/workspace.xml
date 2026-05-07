@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9508e556-d083-4ec7-aa53-9788c555016c" name="변경" comment="" />
+    <list default="true" id="9508e556-d083-4ec7-aa53-9788c555016c" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PaddlePrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaddlePrototype/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FixedBrick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FixedBrick.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/RazerTest Dong.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RazerTest Dong.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ForRazer/ChargingRazerManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ForRazer/ChargingRazerManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ForRazer/GaugeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ForRazer/GaugeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ball_movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ball_movement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/brick_cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/brick_cell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ForRazer/BrickAreaDetector.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -87,6 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1777808224229</updated>
       <workItem from="1777808231052" duration="3523000" />
+      <workItem from="1778130054540" duration="8844000" />
     </task>
     <servers />
   </component>

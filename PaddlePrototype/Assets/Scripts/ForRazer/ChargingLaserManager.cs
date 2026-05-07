@@ -1,19 +1,26 @@
+using System;
 using UnityEngine;
 
-public class ChargingRazerManager : MonoBehaviour
+public class ChargingLaserManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    [SerializeField] private GaugeManager gauge; 
-    private bool charging = false;
+    [SerializeField] private GaugeManager gauge;
+    private LaserShooter shooter;
+    //private bool charging = false;
+    public bool charging = false;
     
     private int bounceCount = 0;
-    private int chargeCount = 0;
+    //private int chargeCount = 0;
+    public int chargeCount = 0;
     [SerializeField]private int PerBounceCount = 10;
-    
-    
-    
-    
+
+    private void Start()
+    {
+        shooter = GetComponent<LaserShooter>();
+    }
+
+
     public void CheckBounceCount()
     {
         bounceCount++;
@@ -39,16 +46,15 @@ public class ChargingRazerManager : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0))
         {
-            ShootRazer();
+            ShootLaser();
         }
     }
 
-    private void ShootRazer()
+    private void ShootLaser()
     {
         if (chargeCount > 0)
         {
-            Debug.Log("차징 "+chargeCount+"슛");
-            
+            shooter.Shoot(chargeCount);
             Reset();
         }
     }
@@ -60,5 +66,6 @@ public class ChargingRazerManager : MonoBehaviour
         bounceCount = 0;
         chargeCount = 0;
     }
+    
     
 }

@@ -33,7 +33,7 @@ public class BrickCell : MonoBehaviour, IBallHitReceiver
     {
         if (isFixed)
             return;
-
+        gaugeManager.AddGauge();
         Destroy(gameObject);
     }
 
@@ -42,11 +42,17 @@ public class BrickCell : MonoBehaviour, IBallHitReceiver
         if (manager != null)
         {
             manager.NotifyBrickDestroyed(cell, isFixed, version);
-            gaugeManager.AddGauge();
+           
         }
         
     }
-
+    public void DestroybyLaser()
+    {
+        Destroy(gameObject);
+        
+    }
+    
+    
     public bool IsFixedBrick()
     {
         return isFixed;

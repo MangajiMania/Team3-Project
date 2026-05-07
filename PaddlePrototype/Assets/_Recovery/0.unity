@@ -1408,7 +1408,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-  m_SpriteShape: {fileID: 0}
+  m_SpriteShape: {fileID: 11400000, guid: 3ad23e55f73be4b4cbb3377a71402f8c, type: 2}
   m_FillPixelPerUnit: 100
   m_StretchTiling: 1
   m_SplineDetail: 16
@@ -1430,16 +1430,16 @@ MonoBehaviour:
   m_Creator: {fileID: 0}
   m_Modifiers: []
   m_ColliderSegment:
-  - {x: -1, y: -1}
-  - {x: -1, y: 1}
-  - {x: -0.13393992, y: 1}
-  - {x: -0.07174826, y: 0.11471582}
-  - {x: 0.0002, y: -0.23536873}
-  - {x: 0.07289635, y: 0.12699872}
-  - {x: 0.1370976, y: 1.0147495}
-  - {x: 1, y: 1}
-  - {x: 1, y: -1}
-  - {x: -1, y: -1}
+  - {x: -0.99950016, y: -0.99950004}
+  - {x: -0.99950004, y: 0.9994999}
+  - {x: -0.13443941, y: 0.9999776}
+  - {x: -0.072245285, y: 0.11466136}
+  - {x: 0.0005584801, y: -0.23571728}
+  - {x: 0.07339332, y: 0.12694383}
+  - {x: 0.13708906, y: 1.0142496}
+  - {x: 0.99950004, y: 0.9995085}
+  - {x: 0.99950004, y: -0.99950016}
+  - {x: -0.99950016, y: -0.99950004}
   m_ShadowSegment: []
 --- !u!1971053207 &729019795
 SpriteShapeRenderer:
@@ -1492,11 +1492,20 @@ SpriteShapeRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_ShapeTexture: {fileID: 0}
-  m_Sprites: []
+  m_ShapeTexture: {fileID: 2800000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
+  m_Sprites:
+  - {fileID: 21300000, guid: 0ae2b74b1edd14bb18dd7b65ae916a54, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 0, y: 0.0073746443, z: 0}
-    m_Extent: {x: 1.0000001, y: 1.0073748, z: 0}
+    m_Center: {x: 0, y: 0.0073565245, z: 0}
+    m_Extent: {x: 1.2500001, y: 1.2573566, z: 0}
   m_SpriteSortPoint: 0
 --- !u!4 &729019796
 Transform:
@@ -1574,16 +1583,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1, y: -1}
-      - {x: -1, y: 1}
-      - {x: -0.13393992, y: 1}
-      - {x: -0.07174826, y: 0.11471582}
-      - {x: 0.0002, y: -0.23536873}
-      - {x: 0.07289635, y: 0.12699872}
-      - {x: 0.1370976, y: 1.0147495}
-      - {x: 1, y: 1}
-      - {x: 1, y: -1}
-      - {x: -1, y: -1}
+    - - {x: -0.99950016, y: -0.99950004}
+      - {x: -0.99950004, y: 0.9994999}
+      - {x: -0.13443941, y: 0.9999776}
+      - {x: -0.072245285, y: 0.11466136}
+      - {x: 0.0005584801, y: -0.23571728}
+      - {x: 0.07339332, y: 0.12694383}
+      - {x: 0.13708906, y: 1.0142496}
+      - {x: 0.99950004, y: 0.9995085}
+      - {x: 0.99950004, y: -0.99950016}
+      - {x: -0.99950016, y: -0.99950004}
   m_UseDelaunayMesh: 1
 --- !u!1 &897515002
 GameObject:
@@ -1839,7 +1848,7 @@ SpriteShapeRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Color: {r: 0, g: 0.9960785, b: 0, a: 1}
   m_ShapeTexture: {fileID: 2800000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
@@ -1986,22 +1995,14 @@ MonoBehaviour:
   brickPrefab: {fileID: 7211861392728797942, guid: ff74d641f8358974d80f7f52fa353f25, type: 3}
   fixedBrickPrefab: {fileID: 7211861392728797942, guid: 845c635dd02107d4fa08c299a504efe3, type: 3}
   brickParent: {fileID: 1511597322}
-  fixedBricks:
-  - cell: {x: 0, y: 5}
-    prefabOverride: {fileID: 7211861392728797942, guid: 845c635dd02107d4fa08c299a504efe3, type: 3}
-  - cell: {x: 0, y: 6}
-    prefabOverride: {fileID: 7211861392728797942, guid: 845c635dd02107d4fa08c299a504efe3, type: 3}
-  - cell: {x: 1, y: 5}
-    prefabOverride: {fileID: 7211861392728797942, guid: 845c635dd02107d4fa08c299a504efe3, type: 3}
-  - cell: {x: 5, y: 10}
-    prefabOverride: {fileID: 7211861392728797942, guid: 845c635dd02107d4fa08c299a504efe3, type: 3}
+  fixedBricks: []
   rowCount: 20
   columnCount: 7
   cellWidth: 1.5
   cellHeight: 0.8
   brickSizeRatio: 0.8
   startPosition: {x: -4.5, y: 9}
-  spawnInterval: 1
+  spawnInterval: 2
   minGrowPerTick: 1
   maxGrowPerTick: 2
   rowWeightMultiplier: 0.2
@@ -2332,8 +2333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea584d29d6b03948868d3ecc368c58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallController
-  baseSpeed: 25
-  maxSpeed: 50
+  baseSpeed: 30
+  maxSpeed: 30
   basePower: 10
   paddleSpeedIncrease: 5
   paddlePowerIncrease: 10
@@ -2343,8 +2344,8 @@ MonoBehaviour:
   centerZone: 0.7
   ballRadius: 0.7
   skinWidth: 0.02
-  _outsideMaxBounceAngle: 50
-  _insideMaxBounceAngle: 50
+  _outsideMaxBounceAngle: 75
+  _insideMaxBounceAngle: 75
   collisionMask:
     serializedVersion: 2
     m_Bits: 64
@@ -2461,7 +2462,6 @@ GameObject:
   - component: {fileID: 1387697785}
   - component: {fileID: 1387697786}
   - component: {fileID: 1387697787}
-  - component: {fileID: 1387697788}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -2513,35 +2513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChargingRazerManager
   gauge: {fileID: 1977228571}
-  charging: 0
-  chargeCount: 0
   PerBounceCount: 10
---- !u!114 &1387697788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1387697784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea2208b845501f049b535cc76dd193b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LaserShooter
-  chargingManager: {fileID: 1387697787}
-  ball: {fileID: 1250265851}
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  stopLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  paddle: {fileID: 226265235}
-  baseWidth: 1
-  widthPerCharge: 0.5
-  range: 50
-  startOffset: 0.25
-  ballSpawnBackOffset: 0.3
 --- !u!1 &1511597321
 GameObject:
   m_ObjectHideFlags: 0
@@ -3190,6 +3162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a429e742d67ed48b1d1f9b873dce8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GaugeManager
+  charging: {fileID: 1387697787}
   filledGaugeSegments: 3
   maxGaugeSegments: 3
   gaugeSegmentText: {fileID: 305040111}
