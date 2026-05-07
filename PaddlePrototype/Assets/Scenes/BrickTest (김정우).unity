@@ -2185,7 +2185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea584d29d6b03948868d3ecc368c58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallController
-  baseSpeed: 15
+  baseSpeed: 30
   maxSpeed: 30
   basePower: 10
   paddleSpeedIncrease: 5
