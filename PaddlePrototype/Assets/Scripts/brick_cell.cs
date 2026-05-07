@@ -6,7 +6,16 @@ public class BrickCell : MonoBehaviour, IBallHitReceiver
     private Vector2Int cell;
     private bool isFixed;
     private int version;
-
+    
+    private GaugeManager gaugeManager;
+    
+    private void Awake()
+    {
+        if (gaugeManager == null)
+        {
+            gaugeManager = FindFirstObjectByType<GaugeManager>();
+        }
+    }
     public void Init(
         BrickManager manager,
         Vector2Int cell,
@@ -31,7 +40,11 @@ public class BrickCell : MonoBehaviour, IBallHitReceiver
     private void OnDestroy()
     {
         if (manager != null)
+        {
             manager.NotifyBrickDestroyed(cell, isFixed, version);
+            gaugeManager.AddGauge();
+        }
+        
     }
 
     public bool IsFixedBrick()
@@ -39,7 +52,7 @@ public class BrickCell : MonoBehaviour, IBallHitReceiver
         return isFixed;
     }
 
-    //unity ¹°¸® »ç¿ë ½Ã (circlecast ¹æ½Ä¿£ ÇÊ¿ä x)
+    //unity ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ (circlecast ï¿½ï¿½Ä¿ï¿½ ï¿½Ê¿ï¿½ x)
     /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!collision.gameObject.CompareTag("Ball"))
