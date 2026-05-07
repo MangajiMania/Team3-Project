@@ -3,9 +3,9 @@
     "file_id": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "path": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "file_name": "ball_movement.cs",
-    "content_hash": "12229f503be336fb61325a7b84bbcda7af5bad3a",
-    "size": 8082,
-    "line_count": 235,
+    "content_hash": "ebba2b07b65c4c10692ec081241d932652d694fc",
+    "size": 8229,
+    "line_count": 238,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -140,6 +140,7 @@
       "bool",
       "UnityEngine",
       "LayerMask",
+      "ChargingRazerManager",
       "Start",
       "LaunchBall",
       "GetComponent",
@@ -158,12 +159,14 @@
       "IBallHitReceiver",
       "OnBallHit",
       "Contains",
+      "CheckBounceCount",
       "Clamp",
       "Lerp",
       "Abs",
       "Quaternion",
       "Euler",
       "Reflect",
+      "Reset",
       "Collider2D",
       "OverlapCircle",
       "BrickCell",
@@ -220,6 +223,7 @@
       "runtime",
       "combat",
       "player",
+      "manager",
       "save-load"
     ],
     "summary_signals": [
@@ -235,9 +239,9 @@
     "file_id": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
     "path": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
     "file_name": "brick_cell.cs",
-    "content_hash": "8ed02a6adc66816b8d4d9b7e4ebdce096cfc88ca",
-    "size": 1222,
-    "line_count": 58,
+    "content_hash": "498aa6bb6727c452e239ae46f2f15f38b10dc4d2",
+    "size": 1493,
+    "line_count": 71,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -262,6 +266,7 @@
     "main_class_name": "BrickCell",
     "unity_type": "MonoBehaviour",
     "methods": [
+      "Awake",
       "Init",
       "OnBallHit",
       "OnDestroy",
@@ -296,17 +301,25 @@
         "access": "private",
         "serialized": false,
         "is_static": false
+      },
+      {
+        "name": "gaugeManager",
+        "type": "GaugeManager",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
       }
     ],
     "properties": [],
     "events": [],
     "unity_messages": [
+      "Awake",
       "OnDestroy"
     ],
     "has_update": false,
     "has_fixed_update": false,
     "has_late_update": false,
-    "has_awake": false,
+    "has_awake": true,
     "has_start": false,
     "has_on_enable": false,
     "has_on_disable": false,
@@ -323,13 +336,17 @@
       "Vector2Int",
       "bool",
       "int",
+      "GaugeManager",
       "UnityEngine",
       "IBallHitReceiver",
+      "Awake",
+      "FindFirstObjectByType",
       "Init",
       "OnBallHit",
       "Destroy",
       "OnDestroy",
       "NotifyBrickDestroyed",
+      "AddGauge",
       "IsFixedBrick",
       "OnCollisionEnter2D",
       "Collision2D",
@@ -349,9 +366,9 @@
     ],
     "numeric_literals": [],
     "guessed_roles": [
+      "runtime",
       "combat",
-      "manager",
-      "runtime"
+      "manager"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
@@ -1236,6 +1253,255 @@
       "전투 계열 로직 포함",
       "저장/불러오기 관련 로직 포함",
       "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "path": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "file_name": "ChargingRazerManager.cs",
+    "content_hash": "ffd2e2f894795437e51b92ed60265faff6d89781",
+    "size": 1255,
+    "line_count": 65,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "ChargingRazerManager",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "ChargingRazerManager",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "CheckBounceCount",
+      "ChargingbyBounce",
+      "Update",
+      "ShootRazer",
+      "Reset"
+    ],
+    "fields": [
+      {
+        "name": "charging",
+        "type": "bool",
+        "access": "private",
+        "serialized": true,
+        "is_static": false
+      },
+      {
+        "name": "bounceCount",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "chargeCount",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 1,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "bool",
+      "int",
+      "UnityEngine",
+      "Start",
+      "Update",
+      "GaugeManager",
+      "PerBounceCount",
+      "CheckBounceCount",
+      "Log",
+      "ChargingbyBounce",
+      "ChangeGaugeLevel",
+      "Input",
+      "GetMouseButtonUp",
+      "ShootRazer",
+      "Reset"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "팅",
+      "차징 ",
+      "슛"
+    ],
+    "numeric_literals": [
+      10
+    ],
+    "guessed_roles": [
+      "runtime",
+      "ui",
+      "player",
+      "manager",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "인스펙터 직렬화 필드 사용",
+      "UI 관련 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "path": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "file_name": "GaugeManager.cs",
+    "content_hash": "eb167ac85bb6e259a42ce73493c16979b793dea5",
+    "size": 2024,
+    "line_count": 87,
+    "namespace": "",
+    "using_list": [
+      "TMPro",
+      "UnityEngine",
+      "UnityEngine.Serialization"
+    ],
+    "classes": [
+      {
+        "name": "GaugeManager",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "GaugeManager",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "AddGauge",
+      "ChangeGaugeLevel",
+      "Update",
+      "UpdateGaugeUI"
+    ],
+    "fields": [
+      {
+        "name": "filledGaugeSegments",
+        "type": "int",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "currentGaugeValue",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "gaugePerSegment",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 1,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "int",
+      "TMPro",
+      "UnityEngine",
+      "Serialization",
+      "ChargingRazerManager",
+      "Gauge",
+      "UI",
+      "TextMeshProUGUI",
+      "CurrentGaugeValue",
+      "Start",
+      "Update",
+      "UpdateGaugeUI",
+      "AddGauge",
+      "ChangeGaugeLevel",
+      "Clamp",
+      "Log",
+      "Segments",
+      "Value"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "Gauge",
+      "UI",
+      "차징 게이지",
+      "Gauge Segments: {filledGaugeSegments} / {maxGaugeSegments}",
+      "Gauge Value: {currentGaugeValue}"
+    ],
+    "numeric_literals": [
+      10,
+      3
+    ],
+    "guessed_roles": [
+      "runtime",
+      "ui",
+      "combat",
+      "manager",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "UI 관련 로직 포함",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
     ]
   },
   {

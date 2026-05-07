@@ -58,6 +58,20 @@
   {
     "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "from_class": "BallController",
+    "to_type": "ChargingRazerManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
+    "to_type": "CheckBounceCount",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
     "to_type": "CircleCast",
     "relation_type": "uses",
     "strength": 1
@@ -282,6 +296,13 @@
   {
     "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "from_class": "BallController",
+    "to_type": "Reset",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
+    "from_class": "BallController",
     "to_type": "ResolveOverlap",
     "relation_type": "uses",
     "strength": 1
@@ -373,6 +394,20 @@
   {
     "from_file": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
     "from_class": "BrickCell",
+    "to_type": "AddGauge",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
+    "from_class": "BrickCell",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
+    "from_class": "BrickCell",
     "to_type": "Ball",
     "relation_type": "uses",
     "strength": 1
@@ -423,6 +458,20 @@
     "from_file": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
     "from_class": "BrickCell",
     "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
+    "from_class": "BrickCell",
+    "to_type": "FindFirstObjectByType",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
+    "from_class": "BrickCell",
+    "to_type": "GaugeManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1697,6 +1746,251 @@
     "from_file": "PaddlePrototype/Assets/Scripts/enemy.cs",
     "from_class": "Enemy",
     "to_type": "WaitForSeconds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "ChangeGaugeLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "ChargingbyBounce",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "CheckBounceCount",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "GaugeManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "GetMouseButtonUp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "Input",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "Log",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "PerBounceCount",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "Reset",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "ShootRazer",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
+    "from_class": "ChargingRazerManager",
+    "to_type": "Update",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "AddGauge",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "ChangeGaugeLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "ChargingRazerManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "Clamp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "CurrentGaugeValue",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "Gauge",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "Log",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "Segments",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "Serialization",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "TextMeshProUGUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "TMPro",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "UI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "Update",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "UpdateGaugeUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
+    "from_class": "GaugeManager",
+    "to_type": "Value",
     "relation_type": "uses",
     "strength": 1
   },
