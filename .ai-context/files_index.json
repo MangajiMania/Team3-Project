@@ -3,7 +3,7 @@
     "file_id": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "path": "PaddlePrototype/Assets/Scripts/ball_movement.cs",
     "file_name": "ball_movement.cs",
-    "content_hash": "ebba2b07b65c4c10692ec081241d932652d694fc",
+    "content_hash": "6fdb7a40cf87ea1850600288944fd7cc2942b5e9",
     "size": 8229,
     "line_count": 238,
     "namespace": "",
@@ -140,7 +140,7 @@
       "bool",
       "UnityEngine",
       "LayerMask",
-      "ChargingRazerManager",
+      "ChargingLaserManager",
       "Start",
       "LaunchBall",
       "GetComponent",
@@ -239,9 +239,9 @@
     "file_id": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
     "path": "PaddlePrototype/Assets/Scripts/brick_cell.cs",
     "file_name": "brick_cell.cs",
-    "content_hash": "498aa6bb6727c452e239ae46f2f15f38b10dc4d2",
-    "size": 1493,
-    "line_count": 71,
+    "content_hash": "16655b29802d7920230107438e0803c8acf02cb5",
+    "size": 1592,
+    "line_count": 77,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -270,6 +270,7 @@
       "Init",
       "OnBallHit",
       "OnDestroy",
+      "DestroybyLaser",
       "IsFixedBrick",
       "OnCollisionEnter2D"
     ],
@@ -343,10 +344,11 @@
       "FindFirstObjectByType",
       "Init",
       "OnBallHit",
+      "AddGauge",
       "Destroy",
       "OnDestroy",
       "NotifyBrickDestroyed",
-      "AddGauge",
+      "DestroybyLaser",
       "IsFixedBrick",
       "OnCollisionEnter2D",
       "Collision2D",
@@ -1256,19 +1258,19 @@
     ]
   },
   {
-    "file_id": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
-    "path": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingRazerManager.cs",
-    "file_name": "ChargingRazerManager.cs",
-    "content_hash": "ffd2e2f894795437e51b92ed60265faff6d89781",
-    "size": 1255,
-    "line_count": 65,
+    "file_id": "PaddlePrototype/Assets/Scripts/ForRazer/BrickAreaDetector.cs",
+    "path": "PaddlePrototype/Assets/Scripts/ForRazer/BrickAreaDetector.cs",
+    "file_name": "BrickAreaDetector.cs",
+    "content_hash": "3a9e97191e87a1cff6d29f998db3f99580bf7cf3",
+    "size": 288,
+    "line_count": 17,
     "namespace": "",
     "using_list": [
       "UnityEngine"
     ],
     "classes": [
       {
-        "name": "ChargingRazerManager",
+        "name": "BrickAreaDetector",
         "kind": "class",
         "access": "public",
         "base_types": [
@@ -1280,21 +1282,101 @@
         "is_generic": false
       }
     ],
-    "main_class_name": "ChargingRazerManager",
+    "main_class_name": "BrickAreaDetector",
     "unity_type": "MonoBehaviour",
     "methods": [
+      "Start",
+      "Update"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UnityEngine",
+      "Start",
+      "Update"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "runtime"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재"
+    ]
+  },
+  {
+    "file_id": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingLaserManager.cs",
+    "path": "PaddlePrototype/Assets/Scripts/ForRazer/ChargingLaserManager.cs",
+    "file_name": "ChargingLaserManager.cs",
+    "content_hash": "d05d859c625d924ec78375ea636fad0cf8291ce9",
+    "size": 1420,
+    "line_count": 72,
+    "namespace": "",
+    "using_list": [
+      "System",
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "ChargingLaserManager",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "ChargingLaserManager",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
       "CheckBounceCount",
       "ChargingbyBounce",
       "Update",
-      "ShootRazer",
+      "ShootLaser",
       "Reset"
     ],
     "fields": [
       {
-        "name": "charging",
-        "type": "bool",
+        "name": "shooter",
+        "type": "LaserShooter",
         "access": "private",
         "serialized": true,
+        "is_static": false
+      },
+      {
+        "name": "charging",
+        "type": "bool",
+        "access": "public",
+        "serialized": false,
         "is_static": false
       },
       {
@@ -1307,7 +1389,7 @@
       {
         "name": "chargeCount",
         "type": "int",
-        "access": "private",
+        "access": "public",
         "serialized": false,
         "is_static": false
       }
@@ -1315,47 +1397,52 @@
     "properties": [],
     "events": [],
     "unity_messages": [
+      "Start",
       "Update"
     ],
     "has_update": true,
     "has_fixed_update": false,
     "has_late_update": false,
     "has_awake": false,
-    "has_start": false,
+    "has_start": true,
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 1,
-    "public_field_count": 0,
-    "get_component_count": 0,
+    "public_field_count": 2,
+    "get_component_count": 1,
     "find_call_count": 0,
     "new_keyword_count": 0,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
+      "LaserShooter",
       "bool",
       "int",
+      "System",
       "UnityEngine",
       "Start",
       "Update",
       "GaugeManager",
       "PerBounceCount",
+      "GetComponent",
       "CheckBounceCount",
       "Log",
       "ChargingbyBounce",
       "ChangeGaugeLevel",
       "Input",
       "GetMouseButtonUp",
-      "ShootRazer",
+      "ShootLaser",
+      "Shoot",
       "Reset"
     ],
-    "component_access_types": [],
+    "component_access_types": [
+      "LaserShooter"
+    ],
     "created_types": [],
     "singleton_access_types": [],
     "string_literals": [
-      "팅",
-      "차징 ",
-      "슛"
+      "팅"
     ],
     "numeric_literals": [
       10
@@ -1372,16 +1459,17 @@
       "Update 기반 처리 존재",
       "인스펙터 직렬화 필드 사용",
       "UI 관련 로직 포함",
-      "저장/불러오기 관련 로직 포함"
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
     ]
   },
   {
     "file_id": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
     "path": "PaddlePrototype/Assets/Scripts/ForRazer/GaugeManager.cs",
     "file_name": "GaugeManager.cs",
-    "content_hash": "eb167ac85bb6e259a42ce73493c16979b793dea5",
+    "content_hash": "c209453385ffe500fd983d1b3e5cf17010851155",
     "size": 2024,
-    "line_count": 87,
+    "line_count": 89,
     "namespace": "",
     "using_list": [
       "TMPro",
@@ -1432,6 +1520,13 @@
         "access": "private",
         "serialized": false,
         "is_static": false
+      },
+      {
+        "name": "maxGaugeValue",
+        "type": "int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
       }
     ],
     "properties": [],
@@ -1460,7 +1555,6 @@
       "TMPro",
       "UnityEngine",
       "Serialization",
-      "ChargingRazerManager",
       "Gauge",
       "UI",
       "TextMeshProUGUI",
@@ -1486,6 +1580,7 @@
       "Gauge Value: {currentGaugeValue}"
     ],
     "numeric_literals": [
+      30,
       10,
       3
     ],
@@ -1500,6 +1595,184 @@
       "런타임 컴포넌트",
       "Update 기반 처리 존재",
       "UI 관련 로직 포함",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "PaddlePrototype/Assets/Scripts/ForRazer/LaserShooter.cs",
+    "path": "PaddlePrototype/Assets/Scripts/ForRazer/LaserShooter.cs",
+    "file_name": "LaserShooter.cs",
+    "content_hash": "1eb9e1f643d56cf6c19c4eb0e4b87776de6b88fa",
+    "size": 3867,
+    "line_count": 129,
+    "namespace": "",
+    "using_list": [
+      "System.Linq",
+      "UnityEngine",
+      "UnityEngine.Serialization"
+    ],
+    "classes": [
+      {
+        "name": "LaserShooter",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "LaserShooter",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Shoot",
+      "Vector2",
+      "FireSegment",
+      "OnDrawGizmos",
+      "Vector3"
+    ],
+    "fields": [
+      {
+        "name": "origin",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "width",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "start",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "endPoint",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "dir",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "width",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "oldMatrix",
+        "type": "Matrix4x4",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 3,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Vector2",
+      "float",
+      "Matrix4x4",
+      "System",
+      "Linq",
+      "UnityEngine",
+      "Serialization",
+      "ChargingLaserManager",
+      "LayerMask",
+      "Brick",
+      "Wall",
+      "Ceiling",
+      "Laser",
+      "Max",
+      "Up",
+      "Shoot",
+      "Log",
+      "FireSegment",
+      "RaycastHit2D",
+      "Physics2D",
+      "BoxCastAll",
+      "SignedAngle",
+      "Where",
+      "OrderBy",
+      "ToArray",
+      "BrickCell",
+      "GetComponentInParent",
+      "DestroybyLaser",
+      "IsFixedBrick",
+      "OnDrawGizmos",
+      "Gizmos",
+      "TRS",
+      "Quaternion",
+      "Euler",
+      "Vector3",
+      "Color",
+      "DrawWireCube"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "Vector2",
+      "Vector3"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "Laser",
+      "차징 ",
+      "슛",
+      "레이저가 브릭 감지: ",
+      "레이저가 벽/천장 감지: "
+    ],
+    "numeric_literals": [
+      1,
+      0.5,
+      20,
+      0.3,
+      0.1,
+      1
+    ],
+    "guessed_roles": [
+      "combat",
+      "runtime",
+      "manager",
+      "player",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
       "전투 계열 로직 포함",
       "저장/불러오기 관련 로직 포함"
     ]
