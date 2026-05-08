@@ -41,16 +41,20 @@ public class GroundPadController : MonoBehaviour
             return;
 
         // 2. Mouse.current를 사용하여 클릭 체크
-        if (Mouse.current.leftButton.isPressed)
+        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
         {
-            MovePad();
+            MovePad(Touchscreen.current.primaryTouch.position.ReadValue());
+        }
+        else if (Mouse.current != null && Mouse.current.leftButton.isPressed)
+        {
+            MovePad(Mouse.current.position.ReadValue());
         }
     }
 
-    void MovePad()
+    void MovePad(Vector2 screenPos)
     {
         // 3. 마우스 위치 읽기
-        Vector2 mousePixelPos = Mouse.current.position.ReadValue();
+        Vector2 mousePixelPos = screenPos;
         Vector3 mousePos = mainCamera.ScreenToWorldPoint(new Vector3(mousePixelPos.x, mousePixelPos.y, -mainCamera.transform.position.z));
         
         Vector3 targetPos = new Vector3(mousePos.x, transform.position.y, transform.position.z);

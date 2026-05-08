@@ -42,10 +42,16 @@ public class UpperPadController : MonoBehaviour
         // 2. Mouse.current를 사용하여 클릭 체크
         if (activeCollisionEnabled == 1) 
         {
-                if (Mouse.current.leftButton.isPressed)
+            if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
             {
                 SetAlpha(1.0f);
-                MovePad();
+                MovePad(Touchscreen.current.primaryTouch.position.ReadValue());
+                paddleCollider.enabled = true;
+            }
+            else if (Mouse.current != null && Mouse.current.leftButton.isPressed)
+            {
+                SetAlpha(1.0f);
+                MovePad(Mouse.current.position.ReadValue());
                 paddleCollider.enabled = true;
             }
             else
@@ -61,10 +67,10 @@ public class UpperPadController : MonoBehaviour
         
     }
 
-    void MovePad()
+    void MovePad(Vector2 screenPos)
     {
         // 3. 마우스 위치 읽기
-        Vector2 mousePixelPos = Mouse.current.position.ReadValue();
+        Vector2 mousePixelPos = screenPos;
         Vector3 mousePos = mainCamera.ScreenToWorldPoint(new Vector3(mousePixelPos.x, mousePixelPos.y, -mainCamera.transform.position.z));
         
         Vector3 targetPos = new Vector3(mousePos.x, transform.position.y, transform.position.z);

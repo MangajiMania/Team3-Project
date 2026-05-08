@@ -28,6 +28,7 @@ public class BallController : MonoBehaviour
     private float actualRadius;
 
     public LayerMask collisionMask; // 벽과 패들 레이어를 선택하세요
+    [SerializeField] private int maxCollisionIterations = 5;
     
     private Transform tr;
     private Vector2 direction;
@@ -66,30 +67,36 @@ public class BallController : MonoBehaviour
 
     void MoveBall(float distance)
     {
-        // 1. CircleCast로 이동 경로에 장애물이 있는지 확인
-        RaycastHit2D hit = Physics2D.CircleCast(transform.position, actualRadius, direction, distance, collisionMask);
+        float remainingDistance = distance;
 
-        if (hit.collider != null)
+        for (int i = 0; i < maxCollisionIterations; i++)
         {
-            // 2. 충돌 지점까지 우선 이동 (충돌 지점에서 아주 살짝 띄움)
-            float distanceToHit = hit.distance;
-            transform.Translate(direction * distanceToHit, Space.World);
+            // 1. CircleCast로 이동 경로에 장애물이 있는지 확인
+            RaycastHit2D hit = Physics2D.CircleCast(transform.position, actualRadius, direction, remainingDistance, collisionMask);
 
-            // 3. 충돌 대상에 따른 반사 방향 계산
-            float remainingDistance = distance - distanceToHit;
-            UpdateDirection(hit);
-
-            // 4. 남은 거리가 있다면 새로운 방향으로 다시 이동 (재귀 호출 방지를 위해 단순화)
-            if (remainingDistance > 0)
+            if (hit.collider != null)
             {
+                // 2. 충돌 지점까지 우선 이동 (충돌 지점에서 아주 살짝 띄움)
+                float distanceToHit = Mathf.Max(hit.distance - skinWidth, 0f);
+                transform.Translate(direction * distanceToHit, Space.World);
+
+                // 3. 충돌 대상에 따른 반사 방향 계산
+                remainingDistance -= distanceToHit;
+                UpdateDirection(hit);
+
+                if (remainingDistance <= 0.001f)
+                {
+                    break;
+                }
+            }
+            else
+            {
+                // 충돌이 없다면 지정된 거리만큼 직선 이동
                 transform.Translate(direction * remainingDistance, Space.World);
+                break;
             }
         }
-        else
-        {
-            // 충돌이 없다면 지정된 거리만큼 직선 이동
-            transform.Translate(direction * distance, Space.World);
-        }
+
         ResolveOverlap();
     }
 
